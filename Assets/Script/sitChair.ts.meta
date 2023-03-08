@@ -1,0 +1,37 @@
+fileFormatVersion: 2
+guid: 52209e436bbc60d43919b5f0dcdc9625
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst UnityEngine_1 = require(\\\"UnityEngine\\\");\\r\\nconst
+    ZEPETO_Character_Controller_1 = require(\\\"ZEPETO.Character.Controller\\\");\\r\\nconst
+    ZEPETO_Script_1 = require(\\\"ZEPETO.Script\\\");\\r\\nclass sitChair extends
+    ZEPETO_Script_1.ZepetoScriptBehaviour {\\r\\n    Start() {\\r\\n        this.cam
+    = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.ZepetoCamera.camera; //
+    \uC0DD\uC131\uB41C \uD50C\uB808\uC774\uC5B4\uC758 \uCE74\uBA54\uB77C \uAC00\uC838\uC624\uAE30\\r\\n       
+    this.GetComponent($typeof(UnityEngine_1.Canvas)).worldCamera = this.cam;\\r\\n       
+    this.btn.onClick.AddListener(() => {\\r\\n            this.btn.transform.parent.parent.gameObject.SetActive(false);\\r\\n           
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.ZepetoAnimator.SetBool(\\\"isSit1\\\",
+    true);\\r\\n            ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.Teleport(this.chairPoint.position,
+    this.chairPoint.rotation);\\r\\n            // ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.transform.position
+    = this.chairPoint.position;\\r\\n            // ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.transform.rotation
+    = this.chairPoint.rotation;\\r\\n        });\\r\\n    }\\r\\n}\\r\\nexports.default
+    = sitChair;\\r\\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2l0Q2hhaXIuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJzaXRDaGFpci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDZDQUFrRTtBQUVsRSw2RUFBNEQ7QUFDNUQsaURBQXFEO0FBRXJELE1BQXFCLFFBQVMsU0FBUSxxQ0FBcUI7SUFPdkQsS0FBSztRQUNELElBQUksQ0FBQyxHQUFHLEdBQUcsMkNBQWEsQ0FBQyxRQUFRLENBQUMsWUFBWSxDQUFDLE1BQU0sQ0FBQyxDQUFJLHFCQUFxQjtRQUMvRSxJQUFJLENBQUMsWUFBWSxTQUFDLG9CQUFNLEdBQUksV0FBVyxHQUFHLElBQUksQ0FBQyxHQUFHLENBQUM7UUFFbkQsSUFBSSxDQUFDLEdBQUcsQ0FBQyxPQUFPLENBQUMsV0FBVyxDQUFDLEdBQUcsRUFBRTtZQUM5QixJQUFJLENBQUMsR0FBRyxDQUFDLFNBQVMsQ0FBQyxNQUFNLENBQUMsTUFBTSxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7WUFFN0QsMkNBQWEsQ0FBQyxRQUFRLENBQUMsV0FBVyxDQUFDLFlBQVksQ0FBQyxTQUFTLENBQUMsY0FBYyxDQUFDLE9BQU8sQ0FBQyxRQUFRLEVBQUUsSUFBSSxDQUFDLENBQUM7WUFDakcsMkNBQWEsQ0FBQyxRQUFRLENBQUMsV0FBVyxDQUFDLFlBQVksQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLElBQUksQ0FBQyxVQUFVLENBQUMsUUFBUSxFQUFFLElBQUksQ0FBQyxVQUFVLENBQUMsUUFBUSxDQUFDLENBQUM7WUFDdkgsMkdBQTJHO1lBQzNHLDJHQUEyRztRQUMvRyxDQUFDLENBQUMsQ0FBQTtJQUNOLENBQUM7Q0FDSjtBQXBCRCwyQkFvQkMifQ==\",\"assetPath\":\"Assets/Script/sitChair.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"UnityEngine.UI\",\"name\":\"btn\",\"type\":\"UnityEngine.UI.Button\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"chairPoint\",\"type\":\"UnityEngine.Transform\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]}],\"name\":\"sitChair\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: cf90e5f02ae332df29ab5c8249dda453
+  onlyWriteTrigger: 0

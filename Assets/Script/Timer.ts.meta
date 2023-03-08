@@ -1,0 +1,51 @@
+fileFormatVersion: 2
+guid: 41ef91fbd178b27479f222ddee053265
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    UnityEngine_UI_1 = require(\"UnityEngine.UI\");\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    FlowerGame_1 = require(\"./FlowerGame\");\r\nconst MovieSetGameManager_1 = require(\"./MovieSetGameManager\");\r\nclass
+    Timer extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    constructor() {\r\n       
+    super(...arguments);\r\n        this.placeNum = 0;\r\n        this.time = 9;\r\n   
+    }\r\n    Start() {\r\n        this.isGameStart = false;\r\n        this.selectCountdown
+    = this.time;\r\n        switch (this.placeNum) {\r\n            case 0:\r\n               
+    this.movieGame = this.GameObj.GetComponent($typeof(MovieSetGameManager_1.default));\r\n               
+    break;\r\n            case 1:\r\n                this.flowerGame = this.GameObj.GetComponent($typeof(FlowerGame_1.default));\r\n               
+    break;\r\n        }\r\n        this.StartButton.onClick.AddListener(() => {\r\n           
+    if (this.isGameStart == false) {\r\n                this.isGameStart = true;\r\n               
+    this.StartButton.gameObject.SetActive(false);\r\n                switch (this.placeNum)
+    {\r\n                    case 0:\r\n                        this.movieGame.StartGame();\r\n                       
+    break;\r\n                    case 1:\r\n                        this.flowerGame.StartGame();\r\n                       
+    break;\r\n                }\r\n                this.StartCoroutine(this.Timer());\r\n           
+    }\r\n        });\r\n        this.timerTxt.text = \"00\";\r\n    }\r\n    *Timer()
+    {\r\n        while (this.isGameStart) {\r\n            yield null;\r\n           
+    if (Math.floor(this.selectCountdown) <= 0) {\r\n                this.TimerReset();\r\n           
+    }\r\n            else {\r\n                this.selectCountdown -= UnityEngine_1.Time.deltaTime;\r\n               
+    this.timerTxt.text = Math.floor(this.selectCountdown).toString(); // / 60%60).toString()
+    + '' : '' + Math.floor(this.selectCountdown % 60).toString();\r\n           
+    }\r\n        }\r\n        this.StopCoroutine(this.Timer());\r\n    }\r\n    TimerReset(isFail
+    = true) {\r\n        this.StartButton.gameObject.SetActive(true);\r\n       
+    switch (this.placeNum) {\r\n            case 0:\r\n                this.movieGame.ResetGame(isFail);\r\n               
+    break;\r\n            case 1:\r\n                this.flowerGame.ResetGame(isFail);\r\n               
+    break;\r\n        }\r\n        this.isGameStart = false;\r\n        this.selectCountdown
+    = this.time;\r\n        this.timerTxt.text = \"00\";\r\n        this.StopCoroutine(this.Timer());\r\n   
+    }\r\n}\r\nexports.default = Timer;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVGltZXIuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJUaW1lci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDZDQUErQztBQUMvQyxtREFBOEM7QUFDOUMsaURBQXFEO0FBQ3JELDZDQUFzQztBQUN0QywrREFBd0Q7QUFHeEQsTUFBcUIsS0FBTSxTQUFRLHFDQUFxQjtJQUF4RDs7UUFDVyxhQUFRLEdBQVksQ0FBQyxDQUFDO1FBQ3RCLFNBQUksR0FBVyxDQUFDLENBQUM7SUF3RTVCLENBQUM7SUE5REcsS0FBSztRQUNELElBQUksQ0FBQyxXQUFXLEdBQUcsS0FBSyxDQUFDO1FBQ3pCLElBQUksQ0FBQyxlQUFlLEdBQUcsSUFBSSxDQUFDLElBQUksQ0FBQztRQUVqQyxRQUFPLElBQUksQ0FBQyxRQUFRLEVBQUM7WUFDakIsS0FBSyxDQUFDO2dCQUNGLElBQUksQ0FBQyxTQUFTLEdBQUcsSUFBSSxDQUFDLE9BQU8sQ0FBQyxZQUFZLFNBQUMsNkJBQW1CLEVBQUcsQ0FBQztnQkFDbEUsTUFBTTtZQUNWLEtBQUssQ0FBQztnQkFDRixJQUFJLENBQUMsVUFBVSxHQUFHLElBQUksQ0FBQyxPQUFPLENBQUMsWUFBWSxTQUFDLG9CQUFVLEVBQUcsQ0FBQztnQkFDMUQsTUFBTTtTQUNiO1FBRUQsSUFBSSxDQUFDLFdBQVcsQ0FBQyxPQUFPLENBQUMsV0FBVyxDQUFDLEdBQUcsRUFBRTtZQUN0QyxJQUFHLElBQUksQ0FBQyxXQUFXLElBQUksS0FBSyxFQUFDO2dCQUN6QixJQUFJLENBQUMsV0FBVyxHQUFHLElBQUksQ0FBQztnQkFDeEIsSUFBSSxDQUFDLFdBQVcsQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFDLEtBQUssQ0FBQyxDQUFDO2dCQUM3QyxRQUFPLElBQUksQ0FBQyxRQUFRLEVBQUM7b0JBQ2pCLEtBQUssQ0FBQzt3QkFDRixJQUFJLENBQUMsU0FBUyxDQUFDLFNBQVMsRUFBRSxDQUFDO3dCQUMzQixNQUFNO29CQUNWLEtBQUssQ0FBQzt3QkFDRixJQUFJLENBQUMsVUFBVSxDQUFDLFNBQVMsRUFBRSxDQUFDO3dCQUM1QixNQUFNO2lCQUNiO2dCQUNELElBQUksQ0FBQyxjQUFjLENBQUMsSUFBSSxDQUFDLEtBQUssRUFBRSxDQUFDLENBQUM7YUFDckM7UUFDTCxDQUFDLENBQUMsQ0FBQTtRQUVGLElBQUksQ0FBQyxRQUFRLENBQUMsSUFBSSxHQUFHLElBQUksQ0FBQTtJQUM3QixDQUFDO0lBRU8sQ0FBQyxLQUFLO1FBQ1YsT0FBTSxJQUFJLENBQUMsV0FBVyxFQUFDO1lBQ25CLE1BQU0sSUFBSSxDQUFDO1lBQ1gsSUFBRyxJQUFJLENBQUMsS0FBSyxDQUFDLElBQUksQ0FBQyxlQUFlLENBQUMsSUFBSSxDQUFDLEVBQUU7Z0JBQ3RDLElBQUksQ0FBQyxVQUFVLEVBQUUsQ0FBQzthQUNyQjtpQkFDSTtnQkFDRCxJQUFJLENBQUMsZUFBZSxJQUFJLGtCQUFJLENBQUMsU0FBUyxDQUFDO2dCQUN2QyxJQUFJLENBQUMsUUFBUSxDQUFDLElBQUksR0FBRyxJQUFJLENBQUMsS0FBSyxDQUFDLElBQUksQ0FBQyxlQUFlLENBQUMsQ0FBQyxRQUFRLEVBQUUsQ0FBQSxDQUFDLGtGQUFrRjthQUN0SjtTQUNKO1FBQ0QsSUFBSSxDQUFDLGFBQWEsQ0FBQyxJQUFJLENBQUMsS0FBSyxFQUFFLENBQUMsQ0FBQztJQUNyQyxDQUFDO0lBRU0sVUFBVSxDQUFDLFNBQWlCLElBQUk7UUFDbkMsSUFBSSxDQUFDLFdBQVcsQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFDLElBQUksQ0FBQyxDQUFDO1FBQzVDLFFBQU8sSUFBSSxDQUFDLFFBQVEsRUFBQztZQUNqQixLQUFLLENBQUM7Z0JBQ0YsSUFBSSxDQUFDLFNBQVMsQ0FBQyxTQUFTLENBQUMsTUFBTSxDQUFDLENBQUM7Z0JBQ2pDLE1BQU07WUFDVixLQUFLLENBQUM7Z0JBQ0YsSUFBSSxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsTUFBTSxDQUFDLENBQUM7Z0JBQ2xDLE1BQU07U0FDYjtRQUNELElBQUksQ0FBQyxXQUFXLEdBQUcsS0FBSyxDQUFDO1FBQ3pCLElBQUksQ0FBQyxlQUFlLEdBQUcsSUFBSSxDQUFDLElBQUksQ0FBQztRQUNqQyxJQUFJLENBQUMsUUFBUSxDQUFDLElBQUksR0FBRyxJQUFJLENBQUE7UUFDekIsSUFBSSxDQUFDLGFBQWEsQ0FBQyxJQUFJLENBQUMsS0FBSyxFQUFFLENBQUMsQ0FBQztJQUNyQyxDQUFDO0NBRUo7QUExRUQsd0JBMEVDIn0=","assetPath":"Assets/Script/Timer.ts","manifest":{"properties":[{"assembly":"mscorlib","name":"placeNum","type":"System.Single","isArray":false,"initValue":["0"],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"time","type":"System.Single","isArray":false,"initValue":["9"],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.UI","name":"timerTxt","type":"UnityEngine.UI.Text","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.UI","name":"StartButton","type":"UnityEngine.UI.Button","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"isGameStart","type":"System.Boolean","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"GameObj","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"Timer","description":""},"isCompiled":true}'
+  typescriptHash: 3b539f326a7236352af6b050a1816d7e
+  onlyWriteTrigger: 0

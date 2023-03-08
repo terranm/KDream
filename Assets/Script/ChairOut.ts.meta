@@ -1,0 +1,29 @@
+fileFormatVersion: 2
+guid: 0bb4cdcd9e37b004880dd082f8a8663d
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass ChairOut extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    OnTriggerExit(coll) {\r\n        if (coll.gameObject.tag == \"Player\")
+    {\r\n            ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.ZepetoAnimator.\r\n               
+    SetBool(\"isSit1\", false);\r\n            this.transform.GetChild(1).gameObject.SetActive(true);\r\n       
+    }\r\n    }\r\n}\r\nexports.default = ChairOut;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQ2hhaXJPdXQuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJDaGFpck91dC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUNBLDZFQUE0RDtBQUM1RCxpREFBcUQ7QUFFckQsTUFBcUIsUUFBUyxTQUFRLHFDQUFxQjtJQUV2RCxhQUFhLENBQUMsSUFBYTtRQUN2QixJQUFJLElBQUksQ0FBQyxVQUFVLENBQUMsR0FBRyxJQUFJLFFBQVEsRUFBQztZQUNoQywyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxXQUFXLENBQUMsWUFBWSxDQUFDLFNBQVMsQ0FBQyxjQUFjO2dCQUN4RSxPQUFPLENBQUMsUUFBUSxFQUFFLEtBQUssQ0FBQyxDQUFDO1lBQ3pCLElBQUksQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLENBQUM7U0FDekQ7SUFDTCxDQUFDO0NBQ0o7QUFURCwyQkFTQyJ9","assetPath":"Assets/Script/ChairOut.ts","manifest":{"properties":[],"name":"ChairOut","description":""},"isCompiled":true}'
+  typescriptHash: 31de65744e53124f53a45992a504884e
+  onlyWriteTrigger: 0

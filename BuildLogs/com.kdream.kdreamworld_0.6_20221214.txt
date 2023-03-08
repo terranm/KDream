@@ -1,0 +1,601 @@
+[World Settings]
+world id             com.kdream.kdreamworld
+version              0.6                 
+max clients          8                   
+orientation          horizontal          
+disable invite       false               
+disable room list    false               
+disable private room false               
+
+[Build Manifest]
+[scenes]
+14 mb                assets/scenes/dream.unity
+[assets]
+3 kb                 packages/com.unity.postprocessing/postprocessing/shaders/builtins/multiscalevo.shader
+2 kb                 assets/model/effect/4_fire/materials/mat_glow.mat
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_58.png
+3 mb                 assets/model/3d_model/dream_1109.fbx
+55 kb                assets/model/dodam/prop/dodam_prop_sign_x.fbx
+2 kb                 assets/model/material/ship.mat
+8 kb                 assets/model/material/texture/sub_water.jpg
+2 kb                 assets/model/material/name2 1.mat
+11 kb                assets/ui/룰렛/룰렛 시작 버튼.png
+35 kb                packages/zepeto.character.controller/runtime/_resources/inputactions/zepetoinputcontrol.inputactions
+122 kb               assets/ui/추가 이미지/티켓획득/마음드림존 드림티켓 획득 ui.png
+5 kb                 assets/model/prefab/flowerpupple.prefab
+1 kb                 assets/model/dodam/ani/gaduation.controller
+2 kb                 assets/ui/현수막/5)진로드림존/키워드/materials/진로드림존 타이틀.mat
+2 kb                 assets/ui/현수막/5)진로드림존/키워드/materials/진로드림존 키워드(2).mat
+36 kb                packages/com.unity.postprocessing/postprocessing/gizmos/postprocesslayer.png
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_10.png
+132 kb               assets/ui/자기계발존 영상 편집 체험 이미지/1.png
+2 kb                 assets/ui/현수막/2)배움드림존/키워드/materials/배움드림존 타이틀.mat
+2 kb                 assets/model/material/campingtex01.mat
+13 kb                assets/ui/퀘스트 확인/퀘스트확인팝업창/마음드림존.png
+510 kb               assets/model/material/texture/tent_bottom.png
+2 kb                 assets/ui/현수막/4)마음드림존/키워드/materials/마음드림존 키워드 1.mat
+42 kb                assets/model/material/texture/book.png
+83 kb                assets/ui/현수막/2)배움드림존/키워드/배움드림존 키워드(1).png
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/walk.anim
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_46.png
+155 kb               assets/ui/현수막/1)중앙광장/꿈드림센터소개(가로)_수정_2.png
+82 kb                assets/ui/현수막/3)재능드림존/키워드/재능드림존 키워드(3).png
+2 kb                 assets/model/material/pcroom.mat
+3 kb                 packages/com.unity.postprocessing/postprocessing/shaders/builtins/autoexposure.compute
+383 kb               assets/model/dodam/prop/dodam_prop_flower.fbx
+350 kb               packages/com.unity.postprocessing/postprocessing/textures/smaa/areatex.tga
+7 kb                 assets/model/material/texture/배움드림존.png
+2 kb                 assets/model/effect/4_fire/materials/mat_sparks.mat
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_44.png
+2 kb                 assets/model/material/tent_bottom.mat
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_62.png
+2 kb                 assets/model/material/odu_item.mat
+96 kb                packages/com.unity.postprocessing/postprocessing/textures/bluenoise256px/ldr_lll1_2.png
+49 kb                assets/ui/5)재능드림존/재능드림존 퀘스트(2).png
+27 kb                packages/zepeto.character.controller/runtime/_resources/prefabs/uicontroller_touchpad_horizontal.prefab
+2 kb                 assets/ui/현수막/1)중앙광장/materials/청소년 동절기 추가접종.mat
+801 kb               assets/model/material/texture/pc_singing_setting_none_basecolor.png
+546 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/landingroll.anim
+454 kb               assets/model/portal.prefab
+5 kb                 assets/model/prefab/zepetocamera.prefab
+2 kb                 assets/model/material/fall_leaf.mat
+2 kb                 assets/ui/현수막/1)중앙광장/materials/꿈드림센터소개(세로)_수정.mat
+93 kb                assets/ui/현수막/4)마음드림존/키워드/마음드림존2.png
+27 kb                packages/zepeto.character.controller/runtime/_resources/prefabs/uicontroller_touchpad_vertical.prefab
+37 kb                assets/ui/8)권리드림존/퀴즈2/권리드림존 ox퀴즈(2)_정답.png
+1 kb                 packages/com.unity.inputsystem/inputsystem/editor/icons/inputsystemuiinputmodule@64.png
+126 kb               assets/ui/추가 이미지/티켓획득/진로드림존 드림티켓 획득 ui.png
+4 mb                 assets/model/material/camping_ground_sky_night 1.mat
+8 kb                 assets/model/material/texture/배움드림존_b.png
+7 kb                 assets/ui/1)월드입장/2/상담문의하기.png
+85 kb                assets/ui/현수막/4)마음드림존/키워드/마음드림존4.png
+84 kb                assets/ui/현수막/6)권리드림존/키워드/권리드림존 키워드(1).png
+58 kb                assets/ui/현수막/3)재능드림존/자립지원안내(1).png
+8 kb                 assets/model/material/texture/권리드림존_b.png
+3 mb                 assets/model/material/texture/singing_room_defaultmaterial_basecolor.png
+17 kb                packages/com.unity.postprocessing/postprocessing/shaders/builtins/multiscalevoupsample.compute
+11 kb                packages/com.unity.postprocessing/postprocessing/shaders/debug/overlays.shader
+1 mb                 assets/model/anim_hum/sit_pose02.fbx
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_45.png
+2 kb                 assets/model/material/fish.mat
+967 kb               assets/model/3d_model/under_water.fbx
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_9.png
+3 mb                 assets/model/material/texture/land_none_basecolor.png
+388 kb               assets/model/3d_model/fish_megi.fbx
+2 kb                 assets/ui/현수막/6)권리드림존/키워드/materials/권리드림존 키워드(1) 3.mat
+62 kb                packages/zepeto.character.controller/runtime/_resources/animations/base/gesture.anim
+87 kb                assets/ui/1)월드입장/2/월드 입장(2).png
+17 kb                assets/ui/퀘스트 확인/퀘스트확인팝업창/권리드림존.png
+2 kb                 assets/model/material/sk_sakuratree_001.mat
+104 kb               assets/model/material/texture/sign_alpha.png
+7 kb                 packages/com.unity.postprocessing/postprocessing/shaders/builtins/depthoffield.shader
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_52.png
+2 kb                 assets/model/material/signver113.mat
+2 kb                 assets/ui/현수막/6)권리드림존/키워드/materials/권리드림존 타이틀.mat
+1 mb                 assets/model/material/texture/all_rocket_defaultmaterial_basecolor.png
+44 kb                assets/ui/4)배움드림존/배움드림존 퀘스트(2).png
+2 kb                 assets/model/material/fly_atlas.mat
+2 kb                 assets/ui/현수막/3)재능드림존/키워드/materials/재능드림존 키워드(1).mat
+48 kb                assets/ui/현수막/4)마음드림존/마음드림존안내.png
+168 kb               assets/ui/현수막/1)중앙광장/사이버상담센터(가로).png
+67 kb                assets/model/3d_model/underwater_item.fbx
+24 kb                assets/model/effect/teleport/circle1.png
+5 kb                 assets/ui/x버튼.png   
+11 kb                assets/model/effect/treasure/circle10.png
+5 kb                 assets/ui/1)월드입장/1/pc방버튼.png
+560 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/idle.anim
+1 kb                 packages/com.unity.postprocessing/postprocessing/shaders/builtins/screenspacereflections.shader
+40 kb                assets/ui/7)진로드림존/진로드림존 퀘스트(1).png
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_39.png
+49 kb                assets/ui/현수막/4)마음드림존/마음드림존_4.png
+8 kb                 assets/model/material/texture/진로드림존_b.png
+136 kb               assets/model/3d_model/lantern1.001.mesh
+722 kb               assets/model/prefab/trees.prefab
+271 kb               assets/model/material/texture/ship_tile_defaultmaterial_basecolor.png
+3 kb                 assets/model/prefab/wing.prefab
+5 kb                 assets/ui/1)월드입장/1/노래방버튼.png
+5 kb                 assets/model/material/texture/jomyung_defaultmaterial_basecolor.png
+295 kb               packages/zepeto.character.controller/runtime/_resources/animatorcontroller/zepetoanimatorv2.controller
+2 mb                 assets/ui/현수막/1)중앙광장/청소년 동절기 추가접종.png
+128 kb               assets/model/3d_model/2_flower_0001.fbx
+79 kb                assets/ui/현수막/4)마음드림존/키워드/마음드림존 키워드.png
+828 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/moveturn.anim
+12 kb                assets/model/effect/4_fire/textures/txt_sparks_01.tga
+62 kb                assets/model/dodam/prefab/ox 도담이.prefab
+48 kb                assets/ui/8)권리드림존/퀴즈3/권리드림존 ox퀴즈(3)_정답.png
+2 kb                 assets/model/material/computer.mat
+13 kb                assets/ui/퀘스트 확인/퀘스트확인팝업창/배움드림존.png
+2 kb                 assets/ui/현수막/4)마음드림존/키워드/materials/마음드림존 키워드 2.mat
+96 kb                packages/com.unity.postprocessing/postprocessing/textures/bluenoise256px/ldr_lll1_3.png
+111 kb               assets/model/material/texture/leaf1.png
+5 kb                 assets/model/material/texture/상호박용버튼ui-removebg-preview (1).png
+5 kb                 assets/ui/퀘스트 확인/퀘스트 확인 ui.png
+85 kb                assets/ui/현수막/3)재능드림존/키워드/재능드림존 키워드(5).png
+3 mb                 assets/model/material/texture/cbs_main_tex.png
+1 kb                 packages/com.unity.postprocessing/postprocessing/shaders/debug/waveform.compute
+1 mb                 assets/model/material/texture/odu_atlas_none_basecolor.png
+88 kb                assets/ui/현수막/5)진로드림존/키워드/진로드림존 키워드(3).png
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/jump_idle.anim
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_origin_off.anim
+322 kb               assets/model/dodam/ani/dodam_ani_flower.fbx
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_24.png
+2 kb                 assets/model/effect/treasure/treasure.mat
+48 kb                assets/ui/현수막/3)재능드림존/자립지원안내(4).png
+53 kb                assets/ui/현수막/2)배움드림존/교육지원안내(1).png
+5 kb                 assets/model/effect/portal/other.png
+4 kb                 assets/model/shader_code/water.shader
+1 mb                 assets/model/effect/4_fire/textures/txt_fire_01.tga
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_60.png
+91 kb                assets/ui/현수막/4)마음드림존/키워드/마음드림존3.png
+12 kb                assets/model/material/texture/중앙광장_b.png
+2 kb                 assets/model/skysphere.prefab
+5 kb                 packages/zepeto.character.controller/runtime/_resources/images/touchpad_handle_icon.png
+2 kb                 assets/model/material/lee.mat
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_21.png
+96 kb                packages/com.unity.postprocessing/postprocessing/textures/bluenoise256px/ldr_lll1_7.png
+2 kb                 packages/com.unity.postprocessing/postprocessing/shaders/debug/histogram.shader
+75 kb                assets/ui/현수막/2)배움드림존/키워드/배움드림존 키워드(3).png
+5 kb                 packages/zepeto.character.controller/runtime/_resources/images/touchpad_jump_icon.png
+83 kb                assets/ui/현수막/2)배움드림존/키워드/배움드림존 키워드(2).png
+43 kb                assets/ui/현수막/4)마음드림존/마음드림존_3.png
+130 kb               assets/ui/추가 이미지/티켓획득/재능드림존 드림티켓 획득 ui.png
+46 kb                assets/ui/현수막/4)마음드림존/마음드림존_1.png
+33 kb                assets/ui/6)마음드림존/마음드림존 도담이 npc.png
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_36.png
+7 kb                 assets/ui/1)월드입장/2/스마트 꿈드림센터 체험하기.png
+24 kb                assets/ui/8)권리드림존/퀴즈1/권리드림존 ox퀴즈(1).png
+750 kb               assets/model/material/texture/fall_plants_001.png
+2 kb                 packages/com.unity.postprocessing/postprocessing/shaders/builtins/copystdfromtexarray.shader
+87 kb                assets/ui/현수막/6)권리드림존/키워드/권리드리존1.png
+21 kb                assets/ui/실패.png    
+2 kb                 assets/model/material/singing_room.mat
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_13.png
+2 kb                 assets/ui/현수막/3)재능드림존/키워드/materials/재능드림존 타이틀.mat
+68 kb                assets/ui/현수막/6)권리드림존/권리지원안내(1).png
+2 kb                 assets/model/effect/treasure/treasure_circle.mat
+2 kb                 assets/model/material/chair.mat
+60 kb                assets/model/dodam/prefab/학사모 도담이.prefab
+237 kb               assets/model/3d_model/sk_sakura_body.mesh
+2 kb                 assets/model/material/name4 1.mat
+244 kb               assets/cbs_sakura_wood.png
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_59.png
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_25.png
+32 kb                assets/ui/5)재능드림존/재능드림존 퀘스트(1).png
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_38.png
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_6.png
+5 kb                 assets/ui/6)마음드림존/심리검사/예.png
+2 kb                 assets/model/material/ship_tile.mat
+2 kb                 assets/model/material/name5 1.mat
+114 kb               assets/model/particle system (37).prefab
+8 kb                 assets/ui/4)배움드림존/신청방법 확인하기.png
+2 kb                 assets/ui/현수막/2)배움드림존/키워드/materials/배움드림존 키워드(4).mat
+205 kb               assets/ui/퀘스트 확인/퀘스트확인팝업창/퀘스트 확인.png
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_12.png
+214 kb               assets/model/3d_model/4_dodam_0001.fbx
+2 kb                 assets/model/material/material33.mat
+34 kb                assets/model/3d_model/skysphere.fbx
+61 mb                assets/model/3d_model/pc_singing_setting_0006.fbx
+2 kb                 assets/ui/현수막/4)마음드림존/키워드/materials/마음드림존 타이틀.mat
+2 kb                 assets/model/material/sky.mat
+44 kb                assets/ui/현수막/6)권리드림존/키워드/권리드림존 타이틀.png
+32 kb                assets/ui/성공.png    
+2 kb                 assets/ui/현수막/5)진로드림존/키워드/materials/진로드림존 키워드(3).mat
+5 kb                 assets/ui/추가 이미지/시작버튼/start.png
+8 kb                 assets/ui/룰렛/룰렛_화살표.png
+2 mb                 assets/model/material/texture/tent_basecolor.png
+2 kb                 assets/model/material/shirup.mat
+84 kb                assets/model/3d_model/sign_02.fbx
+3 kb                 assets/model/prefab/book.prefab
+245 kb               assets/model/material/texture/campingtexture_3.png
+31 kb                assets/ui/8)권리드림존/퀴즈3/권리드림존 ox퀴즈(3).png
+8 kb                 assets/ui/7)진로드림존/지원 내용 확인하기.png
+156 kb               assets/ui/룰렛/획득/획득1.png
+11 kb                assets/model/3d_model/monitor_1109.fbx
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_28.png
+2 kb                 assets/model/material/tree.mat
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_19.png
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_41.png
+38 kb                assets/ui/4)배움드림존/배움드림존 도담이 npc.png
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_49.png
+13 kb                assets/model/material/texture/pc_room_defaultmaterial_emissive.png
+2 kb                 assets/model/material/colorchart.mat
+62 kb                packages/zepeto.character.controller/runtime/_resources/animations/base/action2.anim
+96 kb                packages/com.unity.postprocessing/postprocessing/textures/bluenoise256px/ldr_lll1_0.png
+48 kb                assets/ui/8)권리드림존/권리드림존 도담이 npc.png
+2 kb                 assets/model/effect/4_fire/materials/mat_fire_add.mat
+7 kb                 packages/zepeto.character.controller/runtime/_resources/animatorcontroller/uicontrollertouchpadhandle.controller
+6 kb                 assets/model/shader_code/tree_leaf.shader
+13 kb                assets/model/material/texture/moon.jpg
+56 kb                assets/ui/현수막/3)재능드림존/자립지원안내(2).png
+2 kb                 assets/model/material/food.mat
+223 kb               assets/ui/자기계발존 영상 편집 체험 이미지/4.png
+461 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/movewalkfast.anim
+118 kb               assets/ui/추가 이미지/생활기록부 획득 ui 1.png
+2 kb                 assets/model/effect/4_fire/materials/mat_fire_alpha.mat
+4 kb                 packages/com.unity.postprocessing/postprocessing/shaders/builtins/finalpass.shader
+242 kb               assets/model/material/texture/officecomputer01.png
+12 kb                packages/zepeto.character.controller/runtime/_resources/images/touchpad_jump_base.png
+60 kb                assets/ui/현수막/6)권리드림존/권리드림존_3.png
+4 mb                 assets/model/prefab/03_roie shpigler - cat walk.mp3
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_56.png
+452 kb               assets/model/3d_model/lotus_all.fbx
+74 kb                assets/model/3d_model/singing_room.fbx
+30 kb                assets/model/dodam/prefab/마술사 도담이.prefab
+40 kb                assets/model/3d_model/drame_dome02.fbx
+5 mb                 packages/zepeto.character.controller/runtime/_resources/animations/gesture/6_dance.anim
+7 kb                 assets/model/material/texture/진로드림존.png
+2 kb                 assets/model/effect/treasure/treasure_point.mat
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_17.png
+48 kb                assets/ui/현수막/2)배움드림존/키워드/배움드림존 타이틀.png
+172 kb               assets/model/3d_model/jungwon_flower5.fbx
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_15.png
+3 kb                 assets/model/prefab/flower.prefab
+1 mb                 assets/model/anim_hum/dream_chair_ani01.fbx
+8 kb                 packages/com.unity.postprocessing/postprocessing/postprocessresources.asset
+5 kb                 assets/model/prefab/floweryellow.prefab
+940 kb               assets/model/3d_model/fsf_leaves_002.001.mesh
+54 kb                assets/ui/현수막/5)진로드림존/진로 및 직업지원 안내(2).png
+2 kb                 assets/model/material/land2.mat
+2 kb                 assets/model/material/tent.mat
+49 kb                assets/ui/현수막/4)마음드림존/키워드/마음드림존 타이틀.png
+2 kb                 assets/ui/현수막/4)마음드림존/키워드/materials/마음드림존 키워드 5.mat
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_30.png
+22 kb                assets/ui/6)마음드림존/심리검사/마음드림존(3).png
+2 kb                 assets/model/material/new material.mat
+2 kb                 assets/model/material/name4.mat
+385 kb               assets/model/effect/4_fire/objects/ps_parent.prefab
+18 kb                assets/model/material/texture/wing.png
+2 kb                 assets/model/material/권리지원안내(2).mat
+343 kb               assets/model/effect/prefab/effect_treasure 2.prefab
+2 mb                 assets/model/3d_model/shack.fbx
+114 kb               assets/model/effect/prefab/particle system (43).prefab
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_2.png
+1 mb                 assets/model/anim_hum/ani_hand_can.fbx
+58 kb                assets/model/dodam/prop/dodam_prop_sign_o.fbx
+428 kb               assets/model/dodam/ani/dodam_ani_gaduation.fbx
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_61.png
+43 kb                assets/ui/6)마음드림존/마음드림존 심리검사.png
+2 kb                 assets/ui/현수막/3)재능드림존/키워드/materials/재능드림존 키워드(5).mat
+2 kb                 assets/model/material/grass.mat
+7 kb                 assets/model/material/texture/마음드림존.png
+2 kb                 assets/model/material/wing.mat
+1 kb                 assets/model/shader_code/standardnocoloralphatexture_cutoff.shader
+2 kb                 packages/com.unity.postprocessing/postprocessing/shaders/debug/histogram.compute
+2 kb                 packages/com.unity.postprocessing/postprocessing/shaders/builtins/subpixelmorphologicalantialiasing.shader
+2 kb                 assets/model/material/colortexture_001.mat
+65 kb                assets/model/dodam/prop/dodam_prop_magic_wand.fbx
+69 kb                assets/model/dodam/prop/dodam_prop_notebook.fbx
+340 kb               assets/model/effect/prefab/effect_treasure.prefab
+73 kb                assets/model/material/texture/file2.png
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_3.png
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_51.png
+2 kb                 assets/model/material/cbs_sakura_wood.mat
+60 kb                assets/model/dodam/prefab/꽃 도담이.prefab
+618 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/jumpidle.anim
+451 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/stamp.anim
+3 mb                 packages/zepeto.character.controller/runtime/_resources/animations/gesture/5_sleep.anim
+5 kb                 assets/ui/8)권리드림존/o.png
+1 kb                 packages/com.unity.postprocessing/postprocessing/shaders/builtins/texture3dlerp.compute
+55 kb                assets/ui/현수막/3)재능드림존/자립지원안내(5).png
+96 kb                packages/com.unity.postprocessing/postprocessing/textures/bluenoise256px/ldr_lll1_6.png
+22 kb                assets/ui/6)마음드림존/심리검사/마음드림존(4).png
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_57.png
+1 kb                 assets/model/dodam/ani/hi.controller
+11 kb                assets/model/material/texture/중앙광장.png
+123 kb               assets/model/3d_model/fond_1110.fbx
+3 kb                 assets/model/prefab/roketbullon.prefab
+146 kb               assets/ui/자기계발존 영상 편집 체험 이미지/6.png
+43 kb                assets/ui/8)권리드림존/퀴즈1/권리드림존 ox퀴즈(1)_정답.png
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_33.png
+2 kb                 assets/model/material/name3 1.mat
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/v2/movewalk.anim
+253 kb               assets/model/material/texture/lock_wood_colorchart_xi_home_no_metal_basecolor.png
+19 kb                assets/model/shader_code/moon.shader
+2 kb                 assets/model/effect/portal/smoke_m.mat
+8 kb                 assets/model/material/texture/재능드림존.png
+1014 kb              packages/zepeto.character.controller/runtime/_resources/animations/base/v2/idle.anim
+185 kb               assets/ui/현수막/1)중앙광장/꿈드림센터소개(세로)_수정_2.png
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/fall_end.anim
+286 kb               assets/model/material/texture/cbs_ground_rockcliff.png
+18 kb                assets/ui/퀘스트 확인/퀘스트확인팝업창/재능드림존.png
+111 kb               assets/model/dodam/prop/dodam_prop_welcome.fbx
+2 kb                 packages/com.unity.postprocessing/postprocessing/shaders/builtins/multiscalevodownsample2.compute
+428 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/hand_idle_01.anim
+31 kb                packages/com.unity.inputsystem/inputsystem/plugins/playerinput/defaultinputactions.inputactions
+2 kb                 assets/model/effect/portal/shock_wave.mat
+53 kb                assets/ui/현수막/5)진로드림존/진로 및 직업지원 안내(3).png
+44 kb                assets/ui/현수막/3)재능드림존/자립지원안내(3).png
+3 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_origin_ziggle.anim
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_off.anim
+271 kb               assets/model/material/texture/megi_none_basecolor.png
+2 kb                 packages/com.unity.postprocessing/postprocessing/shaders/builtins/copystdfromdoublewide.shader
+222 kb               assets/ui/자기계발존 영상 편집 체험 이미지/3.png
+74 kb                assets/ui/추가 이미지/타이머 ui.png
+28 kb                assets/model/dodam/texture/zepeto_colorchart.png
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_4.png
+600 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/landingslight.anim
+2 kb                 assets/ui/현수막/2)배움드림존/키워드/materials/배움드림존 키워드(2).mat
+9 kb                 assets/model/material/texture/재능드림존_b.png
+1 kb                 packages/com.unity.postprocessing/postprocessing/shaders/debug/vectorscope.compute
+2 mb                 assets/ui/월드지도 1.png
+3 kb                 packages/com.unity.postprocessing/postprocessing/textures/smaa/searchtex.tga
+343 kb               assets/model/dodam/ani/dodam_ani_notebook.fbx
+1 kb                 assets/model/dodam/ani/magic.controller
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_47.png
+39 kb                assets/ui/7)진로드림존/진로드림존 도담이 npc.png
+65 kb                assets/ui/현수막/3)재능드림존/키워드/재능드림존 타이틀.png
+20 kb                assets/ui/6)마음드림존/심리검사/마음드림존_01.png
+14 kb                assets/ui/퀘스트 확인/퀘스트확인팝업창/진로드림존.png
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_23.png
+63 kb                assets/ui/현수막/6)권리드림존/권리지원안내(2).png
+402 kb               assets/model/dodam/ani/dodam_ani_magician.fbx
+2 kb                 assets/model/effect/portal/other_m.mat
+2 kb                 assets/model/material/megi.mat
+2 mb                 assets/model/3d_model/cloud.fbx
+169 kb               assets/model/material/texture/sk_sakuraleaves_001.png
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/jump_move.anim
+2 kb                 assets/ui/현수막/5)진로드림존/키워드/materials/진로드림존 키워드(1).mat
+270 kb               assets/model/material/texture/cbs_fall_wood_01.png
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_26.png
+29 kb                assets/model/material/texture/stylized_grass256.png
+3 kb                 packages/com.unity.postprocessing/postprocessing/shaders/builtins/multiscalevodownsample1.compute
+82 kb                assets/ui/현수막/2)배움드림존/키워드/배움드림존 키워드(4).png
+10 kb                packages/com.unity.postprocessing/postprocessing/shaders/builtins/multiscalevorender.compute
+7 kb                 assets/model/material/texture/권리드림존.png
+2 kb                 assets/ui/현수막/1)중앙광장/materials/건강검진_무료로_받으세요.mat
+34 kb                assets/ui/5)재능드림존/재능드림존 도담이 npc.png
+4 kb                 assets/model/material/texture/odu_atlas_none_emissive.png
+3 kb                 packages/com.unity.postprocessing/postprocessing/shaders/builtins/scalableao.shader
+1 kb                 packages/com.unity.postprocessing/postprocessing/shaders/debug/waveform.shader
+95 kb                assets/ui/현수막/6)권리드림존/키워드/권리드리존4.png
+5 kb                 assets/model/effect/teleport2/bubble2 1.png
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_53.png
+2 kb                 assets/model/effect/teleport/teleport_m.mat
+281 kb               assets/model/material/texture/colorchart.png
+1 kb                 packages/com.unity.postprocessing/postprocessing/shaders/builtins/texture2dlerp.shader
+2 kb                 assets/ui/현수막/1)중앙광장/materials/꿈드림센터소개(가로)_수정.mat
+1 kb                 assets/light/first.lighting
+96 kb                packages/com.unity.postprocessing/postprocessing/textures/bluenoise256px/ldr_lll1_1.png
+88 kb                assets/ui/현수막/6)권리드림존/키워드/권리드리존3.png
+56 kb                assets/ui/현수막/6)권리드림존/권리드림존_2.png
+442 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/jumpmove.anim
+2 kb                 assets/ui/현수막/4)마음드림존/키워드/materials/마음드림존 키워드 3.mat
+312 kb               assets/model/effect/portal/bomb.png
+3 kb                 packages/com.unity.postprocessing/postprocessing/shaders/debug/lightmeter.shader
+76 kb                assets/model/3d_model/6_wing_0001.fbx
+16 kb                assets/model/effect/teleport/circle2.png
+4 mb                 assets/model/material/texture/house_full_defaultmaterial_basecolor.png
+155 kb               assets/model/material/texture/officetable01b.png
+143 kb               assets/ui/룰렛/획득/획득3.png
+644 kb               assets/model/3d_model/5_rocket_0001.fbx
+69 kb                assets/ui/현수막/2)배움드림존/교육지원안내(4).png
+18 kb                packages/zepeto.character.controller/runtime/_resources/animatorcontroller/zepetoanimator.controller
+11 kb                packages/com.unity.postprocessing/postprocessing/shaders/builtins/motionblur.shader
+4 kb                 assets/model/material/texture/color_chart_256.png
+141 kb               assets/model/material/texture/water.png
+951 kb               assets/model/material/texture/bed_color.png
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_50.png
+3 mb                 assets/ui/현수막/1)중앙광장/건강검진_무료로_받으세요_2.png
+2 kb                 packages/com.unity.postprocessing/postprocessing/shaders/builtins/copystd.shader
+86 kb                assets/ui/현수막/6)권리드림존/키워드/권리드리존2.png
+2 kb                 assets/model/dodam/ani/notebook.controller
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_32.png
+36 kb                assets/ui/2)도담이 npc/도담이 npc.png
+44 kb                assets/ui/현수막/2)배움드림존/배움드림존_1.png
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_63.png
+4 kb                 packages/com.unity.postprocessing/postprocessing/shaders/builtins/lut3dbaker.compute
+25 kb                assets/ui/6)마음드림존/심리검사/마음드림존(5).png
+2 kb                 assets/model/material/ci.mat
+40 kb                assets/ui/1)월드입장/1/월드 입장(1).png
+46 kb                assets/ui/현수막/6)권리드림존/권리드림존_1.png
+2 kb                 assets/model/material/bridge.mat
+2 kb                 assets/ui/현수막/6)권리드림존/키워드/materials/권리드림존 키워드(1) 2.mat
+580 kb               assets/model/material/texture/sky_summer.png
+329 kb               assets/model/dodam/ani/dodam_ani_ox.fbx
+5 kb                 assets/model/prefab/flowerblue.prefab
+2 kb                 assets/model/material/garden_bottom.mat
+14 kb                assets/model/effect/fireflys/firework_circle.png
+3 kb                 assets/model/prefab/soundlistener.prefab
+4 kb                 assets/model/prefab/firefly.prefab
+82 kb                assets/ui/현수막/3)재능드림존/키워드/재능드림존 키워드(1).png
+374 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/moverunfast.anim
+19 kb                assets/model/material/texture/star_01.png
+7 kb                 packages/com.unity.postprocessing/postprocessing/shaders/builtins/lut2dbaker.shader
+2 kb                 assets/model/material/name5.mat
+50 kb                assets/model/effect/treasure/circle7.png
+2 kb                 assets/ui/현수막/6)권리드림존/키워드/materials/권리드림존 키워드(1) 4.mat
+7 kb                 assets/model/material/texture/star_02.png
+2 kb                 assets/model/material/book.mat
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_18.png
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_31.png
+1 mb                 assets/ui/로딩화면_텍스트추가.png
+416 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/moverun.anim
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_29.png
+2 kb                 assets/model/effect/teleport2/bubble_water.mat
+651 b                packages/com.unity.postprocessing/postprocessing/shaders/builtins/discardalpha.shader
+947 b                assets/model/shader_code/transparentcutouttwoside.shader
+142 kb               assets/ui/룰렛/획득/획득6.png
+122 kb               assets/ui/추가 이미지/티켓획득/권리드림존 드림티켓 획득 ui.png
+2 kb                 assets/ui/현수막/3)재능드림존/키워드/materials/재능드림존 키워드(4).mat
+160 kb               assets/ui/룰렛/획득/획득2.png
+6 kb                 packages/com.unity.postprocessing/postprocessing/shaders/builtins/temporalantialiasing.shader
+2 kb                 assets/ui/현수막/2)배움드림존/키워드/materials/배움드림존 키워드(1).mat
+3 mb                 assets/model/material/texture/cp_tent_01.png
+26 kb                assets/ui/6)마음드림존/심리검사/마음드림존(2).png
+9 kb                 assets/model/effect/portal/glow-(157)_2.png
+12 kb                packages/com.unity.postprocessing/postprocessing/shaders/builtins/uber.shader
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_11.png
+28 kb                assets/model/material/texture/zepeto_colorchart.png
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_37.png
+2 kb                 assets/model/material/name6.mat
+2 kb                 assets/ui/현수막/6)권리드림존/키워드/materials/권리드림존 키워드(1) 1.mat
+154 kb               assets/ui/룰렛/획득/획득5.png
+2 kb                 assets/model/material/bark.mat
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_22.png
+1 kb                 assets/model/dodam/ani/ox.controller
+44 kb                assets/ui/4)배움드림존/배움드림존 퀘스트(1).png
+836 b                assets/model/effect/fireflys/materials/firework_circle.mat
+5 kb                 assets/ui/6)마음드림존/심리검사/아니요.png
+55 kb                assets/ui/7)진로드림존/진로드림존 퀘스트(2).png
+92 kb                assets/ui/현수막/5)진로드림존/키워드/진로드림존 키워드(2).png
+1 kb                 packages/com.unity.postprocessing/postprocessing/shaders/builtins/copy.shader
+10 kb                assets/model/3d_model/cylinder.050.mesh
+8 kb                 assets/model/material/texture/마음드림존_b.png
+464 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/jumpdouble.anim
+1 kb                 packages/com.unity.postprocessing/postprocessing/shaders/debug/vectorscope.shader
+6 kb                 packages/com.unity.postprocessing/postprocessing/shaders/builtins/bloom.shader
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_16.png
+2 kb                 assets/model/material/wateer.mat
+63 kb                assets/ui/현수막/2)배움드림존/교육지원안내(2).png
+2 kb                 assets/ui/현수막/6)권리드림존/키워드/materials/권리드림존 키워드(1) 5.mat
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_14.png
+2 kb                 assets/model/material/bakr2.mat
+81 kb                assets/ui/현수막/4)마음드림존/키워드/마음드림존1.png
+13 kb                packages/zepeto.character.controller/runtime/_resources/images/touchpad_handle_base.png
+2 mb                 assets/model/material/texture/pc_room_defaultmaterial_basecolor.png
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_34.png
+2 kb                 assets/model/material/color_chart_main.mat
+2 kb                 assets/model/material/ten01.mat
+307 kb               assets/model/anim_hum/fixedzepetoanimatorv2.controller
+28 kb                assets/ui/8)권리드림존/퀴즈2/권리드림존 ox퀴즈(2).png
+241 kb               assets/model/material/texture/officechair03b.png
+61 kb                assets/model/dodam/prefab/노트북 도담이.prefab
+383 kb               assets/ui/룰렛/룰렛_팝업창.png
+2 kb                 assets/model/material/name1 1.mat
+2 kb                 assets/model/material/dome.mat
+50 kb                assets/ui/현수막/5)진로드림존/키워드/진로드림존 타이틀.png
+2 kb                 assets/model/material/권리지원안내(1).mat
+62 kb                packages/zepeto.character.controller/runtime/_resources/animations/base/action1.anim
+343 b                assets/model/material/texture/jomyung2_material _33_emissive.png
+2 kb                 assets/model/material/name1.mat
+2 kb                 assets/model/material/zepeto_color_chart.mat
+2 kb                 assets/model/material/rock.mat
+96 kb                packages/com.unity.postprocessing/postprocessing/textures/bluenoise256px/ldr_lll1_4.png
+3 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_ziggle.anim
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_on.anim
+77 kb                assets/ui/현수막/3)재능드림존/키워드/재능드림존 키워드(4).png
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_5.png
+1 mb                 assets/model/3d_model/sign_1202.fbx
+2 mb                 assets/model/material/texture/land_none2_basecolor.png
+3 kb                 packages/com.unity.postprocessing/postprocessing/shaders/builtins/grainbaker.shader
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_43.png
+60 kb                assets/ui/현수막/2)배움드림존/교육지원안내(3).png
+22 kb                assets/ui/6)마음드림존/심리검사/마음드림존(1).png
+4 mb                 assets/model/material/texture/fall_main_tex.png
+41 kb                assets/ui/3)상담안내/상담문의안내 1.png
+2 kb                 assets/model/material/cloud.mat
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_40.png
+5 kb                 packages/com.unity.postprocessing/postprocessing/shaders/builtins/gaussiandownsample.compute
+89 kb                assets/ui/현수막/3)재능드림존/키워드/재능드림존 키워드(2).png
+331 kb               assets/model/dodam/ani/dodam_ani_welcome.fbx
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_0.png
+169 kb               assets/ui/룰렛/획득/획득4.png
+2 kb                 assets/model/material/rock_cliff.mat
+244 kb               assets/model/material/texture/cbs_sakura_wood.png
+7 kb                 packages/zepeto.character.controller/runtime/_resources/animatorcontroller/uicontrollertouchpadhandleorigin.controller
+2 kb                 assets/ui/현수막/2)배움드림존/키워드/materials/배움드림존 키워드(5).mat
+3 kb                 assets/model/prefab/dodam.prefab
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_20.png
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_35.png
+86 kb                assets/ui/현수막/5)진로드림존/키워드/진로드림존 키워드(1).png
+2 kb                 assets/model/anim_obj/fish_ani.controller
+2 kb                 assets/model/anim_obj/megi_ani.controller
+6 kb                 assets/model/dodam/ani/welcome.controller
+451 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/jumpdash.anim
+2 kb                 assets/ui/현수막/1)중앙광장/materials/사이버상담센터(가로).mat
+359 b                assets/model/anim_hum/new avatar mask.mask
+3 kb                 packages/com.unity.postprocessing/postprocessing/shaders/builtins/exposurehistogram.compute
+3 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/shadow/charactershadow.prefab
+720 kb               assets/model/3d_model/sk_sakura_flower.mesh
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_55.png
+1 mb                 assets/model/3d_model/space_inside.fbx
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_7.png
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_8.png
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_origin_on.anim
+2 kb                 assets/ui/현수막/2)배움드림존/키워드/materials/배움드림존 키워드(3).mat
+179 kb               assets/ui/자기계발존 영상 편집 체험 이미지/5.png
+869 kb               assets/model/material/texture/bridge_defaultmaterial_basecolor.png
+168 kb               assets/ui/자기계발존 영상 편집 체험 이미지/2.png
+2 kb                 assets/model/material/moniter.mat
+111 kb               assets/model/material/texture/zepeto_colorchart_1320.png
+7 kb                 assets/ui/5)재능드림존/분야 확인하기.png
+303 kb               assets/ui/룰렛/룰렛_원형.png
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_1.png
+47 kb                assets/model/dodam/texture/dodam_welcome.png
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_54.png
+5 kb                 assets/ui/8)권리드림존/x.png
+2 kb                 assets/ui/현수막/4)마음드림존/키워드/materials/마음드림존 키워드 4.mat
+80 kb                assets/ui/현수막/2)배움드림존/키워드/배움드림존1.png
+95 kb                assets/model/3d_model/1_book_0001.fbx
+250 kb               assets/model/3d_model/fish_ani.fbx
+1 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/shadow/fxt_blobshadow.png
+3 kb                 assets/model/effect/teleport/particle_m.mat
+570 kb               assets/model/material/texture/base_color_texture02.png
+2 kb                 assets/ui/현수막/6)권리드림존/키워드/materials/권리드림존 키워드(1) 6.mat
+24 kb                assets/model/prosprocess/pc&sing.asset
+2 kb                 assets/model/material/tabe.mat
+59 kb                assets/ui/현수막/6)권리드림존/권리드림존_4.png
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/gesture/4_ok.anim
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/v2/landingdeep.anim
+2 kb                 assets/model/material/house_full_defaultmaterial_basecolor_02.mat
+56 kb                assets/model/material/texture/sk_sakuraleaves_001_alpha.png
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_27.png
+2 kb                 assets/ui/현수막/3)재능드림존/키워드/materials/재능드림존 키워드(3).mat
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_42.png
+2 kb                 assets/model/material/name6 1.mat
+449 kb               assets/model/material/texture/fish_defaultmat_basecolor.png
+117 kb               assets/model/3d_model/fsf_trunk_002.001.mesh
+2 kb                 assets/model/material/fall_main_tex.mat
+301 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/falling.anim
+5 kb                 assets/ui/6)마음드림존/심리검사/확인.png
+87 kb                assets/ui/현수막/6)권리드림존/키워드/권리드림존 키워드(2).png
+96 kb                packages/com.unity.postprocessing/postprocessing/textures/bluenoise256px/ldr_lll1_5.png
+2 kb                 assets/ui/현수막/3)재능드림존/키워드/materials/재능드림존 키워드(2).mat
+22 kb                assets/model/prosprocess/water_volume.asset
+326 kb               assets/model/dodam/ani/dodam_ani_hi.fbx
+4 mb                 assets/model/material/texture/house_full_defaultmaterial_basecolor_02.png
+940 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/run.anim
+2 kb                 assets/model/material/rock_cliff2.mat
+143 kb               assets/model/material/texture/summer_cloud.png
+28 kb                assets/model/material/texture/colortexture_001.png
+6 kb                 packages/com.unity.postprocessing/postprocessing/textures/bluenoise64px/ldr_lll1_48.png
+51 kb                assets/ui/현수막/5)진로드림존/진로 및 직업지원 안내(1).png
+2 kb                 assets/model/material/name2.mat
+2 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/shadow/fxt_blobshadow.mat
+2 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/eventsystem.prefab
+1 mb                 assets/model/3d_model/pc_room 1.fbx
+2 kb                 assets/model/material/권리지원안내(3).mat
+1 kb                 assets/model/dodam/ani/flower.controller
+331 kb               assets/model/material/texture/cbs_ground_rock.png
+2 kb                 assets/model/material/land1.mat
+324 kb               assets/model/material/texture/campingtexture_1.png
+2 kb                 assets/model/material/name3.mat
+1 kb                 packages/com.unity.postprocessing/postprocessing/shaders/builtins/deferredfog.shader
+116 kb               assets/ui/추가 이미지/티켓획득/배움드림존 드림티켓 획득 ui.png
+2 kb                 assets/model/material/full_house.mat
+24 kb                assets/screenshot/ui/images/ic_shutter.png
+5 kb                 assets/model/prefab/flowerred.prefab
+44 kb                assets/ui/현수막/4)마음드림존/마음드림존_2.png
+[resources]
+0 b                  assets/resources    
+[streamingAssets]

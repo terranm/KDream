@@ -1,0 +1,31 @@
+fileFormatVersion: 2
+guid: 251ddd48558145648af341c57e0b58a1
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass
+    CloseShow extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start() {\r\n       
+    this.toShow.SetActive(false);\r\n    }\r\n    // private *init(){\r\n    //    
+    yield new WaitForSeconds(2);\r\n    //     this.toShow.SetActive(false);\r\n   
+    // }\r\n    OnTriggerEnter(coll) {\r\n        if (coll.gameObject.tag == \"Player\")
+    {\r\n            this.toShow.SetActive(true);\r\n        }\r\n    }\r\n    OnTriggerExit(coll)
+    {\r\n        if (coll.gameObject.tag == \"Player\") {\r\n            this.toShow.SetActive(false);\r\n       
+    }\r\n    }\r\n}\r\nexports.default = CloseShow;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQ2xvc2VTaG93LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiQ2xvc2VTaG93LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQ0EsaURBQXFEO0FBRXJELE1BQXFCLFNBQVUsU0FBUSxxQ0FBcUI7SUFJeEQsS0FBSztRQUNELElBQUksQ0FBQyxNQUFNLENBQUMsU0FBUyxDQUFDLEtBQUssQ0FBQyxDQUFDO0lBQ2pDLENBQUM7SUFDRCxtQkFBbUI7SUFDbkIsbUNBQW1DO0lBQ25DLG9DQUFvQztJQUNwQyxJQUFJO0lBRUosY0FBYyxDQUFDLElBQWU7UUFDMUIsSUFBSSxJQUFJLENBQUMsVUFBVSxDQUFDLEdBQUcsSUFBSSxRQUFRLEVBQUM7WUFDaEMsSUFBSSxDQUFDLE1BQU0sQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLENBQUM7U0FDL0I7SUFDTCxDQUFDO0lBRUQsYUFBYSxDQUFDLElBQWU7UUFDekIsSUFBSSxJQUFJLENBQUMsVUFBVSxDQUFDLEdBQUcsSUFBSSxRQUFRLEVBQUM7WUFDaEMsSUFBSSxDQUFDLE1BQU0sQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7U0FDaEM7SUFDTCxDQUFDO0NBRUo7QUF4QkQsNEJBd0JDIn0=","assetPath":"Assets/Script/CloseShow.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"toShow","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"CloseShow","description":""},"isCompiled":true}'
+  typescriptHash: 362c1a582871e255234d57b792a64676
+  onlyWriteTrigger: 0

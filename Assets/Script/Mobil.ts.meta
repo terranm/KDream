@@ -1,0 +1,82 @@
+fileFormatVersion: 2
+guid: b6e6f8783fd53a44aa2c6e61f4a2a933
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass Mobil extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    // Awake(){\r\n    //     this.StartBtn.onClick.AddListener(()=>{\r\n   
+    //         console.log(\"Btn Click\");\r\n    //         this.Ride();\r\n   
+    //         this.StartBtn.gameObject.SetActive(false);\r\n    //     });\r\n   
+    // }\r\n    Start() {\r\n        this.points = new Array();\r\n        this.points
+    = this.MovePoints.GetComponentsInChildren($typeof(UnityEngine_1.Transform));\r\n       
+    this.points.shift();\r\n        this._cnt = 0;\r\n        // this.StartBtn.onClick.AddListener(()=>{\r\n       
+    //     console.log(\"Btn Click\");\r\n        //     this.Ride();\r\n       
+    //     this.StartBtn.gameObject.SetActive(false);\r\n        // });\r\n       
+    console.log(\"showzone\");\r\n        // this.ShowZone.SetActive(true);\r\n   
+    }\r\n    OnTriggerEnter(coll) {\r\n        if (coll.gameObject.tag == \"Player\")
+    {\r\n            this.Ride();\r\n        }\r\n    }\r\n    Ride() {\r\n       
+    if (this.isStart)\r\n            return;\r\n        console.log(\"Ride Start\");\r\n       
+    // obj.SetActive(false);\r\n        // let zipLine = GameManager.Resource.Instantiate(\"ZipLine\");\r\n       
+    // zipLine.transform.position = this.zipPoints[0].position;\r\n        // zipLine.transform.LookAt(this.zipPoints[1].position);\r\n       
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.StopMoving();\r\n       
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.enabled
+    = false;\r\n        ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.transform.SetParent(this.transform);\r\n       
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.transform.localPosition
+    = new UnityEngine_1.Vector3(0, -0.88, 0);\r\n        ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.transform.localRotation
+    = UnityEngine_1.Quaternion.Euler(new UnityEngine_1.Vector3(0, 0, 0));\r\n       
+    this.isStart = true;\r\n        ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.ZepetoAnimator.SetBool(\"isSit2\",
+    true);\r\n        this.StartCoroutine(this.Coroutine_Move(this.points));\r\n   
+    }\r\n    *Coroutine_Move(points) {\r\n        // console.log(\"Coroutine_Move
+    Start\");\r\n        while (this.isStart) {\r\n            yield null;\r\n           
+    this.isStart = this.Move(points);\r\n        }\r\n        ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.enabled
+    = true;\r\n        ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.transform.SetParent(null);\r\n       
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.ZepetoAnimator.SetBool(\"isSit2\",
+    false);\r\n        this.gameObject.SetActive(false);\r\n        this.StopCoroutine(this.Coroutine_Move(points));\r\n       
+    // console.log(\"Coroutine_Move End\");\r\n    }\r\n    Move(points) {\r\n       
+    // if (this._cnt < points.length - 1){\r\n        //     this.speed += this.accel;\r\n       
+    // }\r\n        // else {\r\n        //     if (this.speed > 0.5){\r\n       
+    //         this.speed -= (this.accel * 3);\r\n        //     }\r\n        //
+    }\r\n        this.transform.position = UnityEngine_1.Vector3.MoveTowards(this.transform.position,
+    points[this._cnt].position, this.speed * UnityEngine_1.Time.deltaTime);\r\n       
+    this.transform.Rotate(new UnityEngine_1.Vector3(0, 0.3, 0));\r\n        // console.log(\"speed
+    \" + this.speed);\r\n        let dir = UnityEngine_1.Vector3.zero;\r\n       
+    dir = (UnityEngine_1.Vector3.op_Subtraction(points[this._cnt].position, this.transform.position)).normalized;\r\n       
+    let dist = UnityEngine_1.Vector3.Distance(points[this._cnt].position, this.transform.position);\r\n       
+    if (dist > 0.5) {\r\n            // this.transform.rotation = Quaternion.Slerp(this.transform.rotation,
+    Quaternion.LookRotation(dir), Time.deltaTime * 1);\r\n        }\r\n        else
+    {\r\n            if (this._cnt + 1 < points.length) {\r\n                dir
+    = (UnityEngine_1.Vector3.op_Subtraction(points[this._cnt++].position, this.transform.position)).normalized;\r\n           
+    }\r\n            else if (this._cnt + 1 > points.length) {\r\n               
+    dir = (UnityEngine_1.Vector3.op_Subtraction(points[0].position, this.transform.position)).normalized;\r\n           
+    }\r\n            // this.transform.rotation = Quaternion.Slerp(this.transform.rotation,
+    Quaternion.LookRotation(dir), Time.deltaTime * 1);\r\n        }\r\n        //this.transform.LookAt(this.foodPos[this.foodNum].transform.position);\r\n       
+    if (UnityEngine_1.Vector3.op_Equality(this.transform.position, points[this._cnt].position))
+    {\r\n            dir = new UnityEngine_1.Vector3((points[this._cnt].position.x
+    - this.transform.position.x), (points[this._cnt].position.y - this.transform.position.y),
+    0).normalized;\r\n            //this.transform.rotation = Quaternion.LookRotation(this.dir);\r\n           
+    this._cnt++;\r\n        }\r\n        // if (this.foodNum == 11 && this.number
+    == 0 && !this.isDown) {\r\n        //     this.StopDown();\r\n        // }\r\n       
+    // console.log(\"this._cnt \" + this._cnt + \" points.length \" + points.length);\r\n       
+    return this._cnt != points.length;\r\n        // if (this._cnt == this._points.Length)
+    {\r\n        //     this._cnt = 0;\r\n        // }\r\n    }\r\n}\r\nexports.default
+    = Mobil;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiTW9iaWwuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJNb2JpbC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDZDQUF5RjtBQUV6Riw2RUFBNEQ7QUFDNUQsaURBQXFEO0FBRXJELE1BQXFCLEtBQU0sU0FBUSxxQ0FBcUI7SUFZcEQsV0FBVztJQUNYLDhDQUE4QztJQUM5QyxvQ0FBb0M7SUFDcEMsdUJBQXVCO0lBQ3ZCLHFEQUFxRDtJQUNyRCxVQUFVO0lBQ1YsSUFBSTtJQUVKLEtBQUs7UUFDRCxJQUFJLENBQUMsTUFBTSxHQUFHLElBQUksS0FBSyxFQUFFLENBQUM7UUFDMUIsSUFBSSxDQUFDLE1BQU0sR0FBRyxJQUFJLENBQUMsVUFBVSxDQUFDLHVCQUF1QixTQUFDLHVCQUFTLEVBQUcsQ0FBQztRQUNuRSxJQUFJLENBQUMsTUFBTSxDQUFDLEtBQUssRUFBRSxDQUFDO1FBQ3BCLElBQUksQ0FBQyxJQUFJLEdBQUcsQ0FBQyxDQUFDO1FBQ2QsMENBQTBDO1FBQzFDLGdDQUFnQztRQUNoQyxtQkFBbUI7UUFDbkIsaURBQWlEO1FBQ2pELE1BQU07UUFDTixPQUFPLENBQUMsR0FBRyxDQUFDLFVBQVUsQ0FBQyxDQUFDO1FBQ3hCLGlDQUFpQztJQUNyQyxDQUFDO0lBRUQsY0FBYyxDQUFDLElBQWU7UUFDMUIsSUFBSSxJQUFJLENBQUMsVUFBVSxDQUFDLEdBQUcsSUFBSSxRQUFRLEVBQUM7WUFDaEMsSUFBSSxDQUFDLElBQUksRUFBRSxDQUFDO1NBQ2Y7SUFDTCxDQUFDO0lBRU0sSUFBSTtRQUNQLElBQUksSUFBSSxDQUFDLE9BQU87WUFBRSxPQUFPO1FBQ3pCLE9BQU8sQ0FBQyxHQUFHLENBQUMsWUFBWSxDQUFDLENBQUM7UUFDMUIsd0JBQXdCO1FBQ3hCLDZEQUE2RDtRQUM3RCwyREFBMkQ7UUFDM0Qsd0RBQXdEO1FBQ3hELDJDQUFhLENBQUMsUUFBUSxDQUFDLFdBQVcsQ0FBQyxVQUFVLEVBQUUsQ0FBQztRQUNoRCwyQ0FBYSxDQUFD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","assetPath":"Assets/Script/Mobil.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"MovePoints","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"speed","type":"System.Single","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"accel","type":"System.Single","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"Mobil","description":""},"isCompiled":true}'
+  typescriptHash: 402dc5d431b71d1fb3b65988c42cfa18
+  onlyWriteTrigger: 0

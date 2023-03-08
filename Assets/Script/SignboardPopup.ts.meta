@@ -1,0 +1,40 @@
+fileFormatVersion: 2
+guid: 18efa9b4c3c581c4aa155f046f998b52
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass SignboardPopup extends
+    ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start() {\r\n        this.cam
+    = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.ZepetoCamera.camera;\r\n       
+    this.GetComponent($typeof(UnityEngine_1.Canvas)).worldCamera = this.cam;\r\n       
+    console.log(\"Start SignboardPopup\");\r\n        this.popupBtn.onClick.AddListener(()
+    => {\r\n            console.log(\"Start SignboardPopup btn click\");\r\n           
+    this.popupImg.SetActive(true);\r\n        });\r\n        this.popupCloseBtn.onClick.AddListener(()
+    => {\r\n            console.log(\"Start SignboardPopup close\");\r\n           
+    this.popupImg.SetActive(false);\r\n        });\r\n        this.popupImg.SetActive(false);\r\n       
+    this.popupBtn.gameObject.SetActive(false);\r\n    }\r\n    OnTriggerEnter(coll)
+    {\r\n        if (coll.gameObject.tag == \"Player\") {\r\n            this.popupBtn.gameObject.SetActive(true);\r\n       
+    }\r\n    }\r\n    OnTriggerExit(coll) {\r\n        if (coll.gameObject.tag ==
+    \"Player\") {\r\n            this.popupBtn.gameObject.SetActive(false);\r\n           
+    this.popupImg.SetActive(false);\r\n        }\r\n    }\r\n}\r\nexports.default
+    = SignboardPopup;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU2lnbmJvYXJkUG9wdXAuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJTaWduYm9hcmRQb3B1cC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDZDQUFtRTtBQUVuRSw2RUFBNEQ7QUFDNUQsaURBQXFEO0FBRXJELE1BQXFCLGNBQWUsU0FBUSxxQ0FBcUI7SUFPN0QsS0FBSztRQUNELElBQUksQ0FBQyxHQUFHLEdBQUcsMkNBQWEsQ0FBQyxRQUFRLENBQUMsWUFBWSxDQUFDLE1BQU0sQ0FBQztRQUN0RCxJQUFJLENBQUMsWUFBWSxTQUFDLG9CQUFNLEdBQUksV0FBVyxHQUFHLElBQUksQ0FBQyxHQUFHLENBQUM7UUFDbkQsT0FBTyxDQUFDLEdBQUcsQ0FBQyxzQkFBc0IsQ0FBQyxDQUFDO1FBRXBDLElBQUksQ0FBQyxRQUFRLENBQUMsT0FBTyxDQUFDLFdBQVcsQ0FBQyxHQUFFLEVBQUU7WUFDbEMsT0FBTyxDQUFDLEdBQUcsQ0FBQyxnQ0FBZ0MsQ0FBQyxDQUFDO1lBQzlDLElBQUksQ0FBQyxRQUFRLENBQUMsU0FBUyxDQUFDLElBQUksQ0FBQyxDQUFDO1FBQ2xDLENBQUMsQ0FBQyxDQUFDO1FBRUgsSUFBSSxDQUFDLGFBQWEsQ0FBQyxPQUFPLENBQUMsV0FBVyxDQUFDLEdBQUUsRUFBRTtZQUN2QyxPQUFPLENBQUMsR0FBRyxDQUFDLDRCQUE0QixDQUFDLENBQUM7WUFDMUMsSUFBSSxDQUFDLFFBQVEsQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7UUFDbkMsQ0FBQyxDQUFDLENBQUM7UUFFSCxJQUFJLENBQUMsUUFBUSxDQUFDLFNBQVMsQ0FBQyxLQUFLLENBQUMsQ0FBQztRQUMvQixJQUFJLENBQUMsUUFBUSxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7SUFDOUMsQ0FBQztJQUVELGNBQWMsQ0FBQyxJQUFlO1FBQzFCLElBQUksSUFBSSxDQUFDLFVBQVUsQ0FBQyxHQUFHLElBQUksUUFBUSxFQUFDO1lBQ2hDLElBQUksQ0FBQyxRQUFRLENBQUMsVUFBVSxDQUFDLFNBQVMsQ0FBQyxJQUFJLENBQUMsQ0FBQztTQUM1QztJQUNMLENBQUM7SUFFRCxhQUFhLENBQUMsSUFBZTtRQUN6QixJQUFJLElBQUksQ0FBQyxVQUFVLENBQUMsR0FBRyxJQUFJLFFBQVEsRUFBQztZQUNoQyxJQUFJLENBQUMsUUFBUSxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7WUFDMUMsSUFBSSxDQUFDLFFBQVEsQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7U0FDbEM7SUFDTCxDQUFDO0NBQ0o7QUF0Q0QsaUNBc0NDIn0=","assetPath":"Assets/Script/SignboardPopup.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"cam","type":"UnityEngine.Camera","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.UI","name":"popupBtn","type":"UnityEngine.UI.Button","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"popupImg","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.UI","name":"popupCloseBtn","type":"UnityEngine.UI.Button","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"SignboardPopup","description":""},"isCompiled":true}'
+  typescriptHash: 5f4bb14addc1e612c1e9d81b8ad38dac
+  onlyWriteTrigger: 0

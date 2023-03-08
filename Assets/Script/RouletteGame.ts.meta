@@ -1,0 +1,99 @@
+fileFormatVersion: 2
+guid: dad38bb30dca66f43a8b5e4206319de6
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    UnityEngine_UI_1 = require(\"UnityEngine.UI\");\r\nconst ZEPETO_Character_Controller_1
+    = require(\"ZEPETO.Character.Controller\");\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass
+    RouletteGame extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start() {\r\n       
+    this.popupBtn.transform.parent.GetComponent($typeof(UnityEngine_1.Canvas)).worldCamera
+    = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.ZepetoCamera.camera;\r\n       
+    this.popupBtn.onClick.AddListener(() => {\r\n            // console.log(\"this.popupBtn
+    click \" + this.popupBtn.name);\r\n            this.popup.SetActive(true);\r\n       
+    });\r\n        let mainPlate = this.popup.transform.GetChild(0);\r\n        let
+    rollPlate = this.popup.transform.GetChild(1);\r\n        let mpBtns = mainPlate.GetComponentsInChildren($typeof(UnityEngine_UI_1.Button));\r\n       
+    mpBtns[0].onClick.AddListener(() => {\r\n            this.popup.SetActive(false);\r\n       
+    });\r\n        mpBtns[1].onClick.AddListener(() => {\r\n            rollPlate.gameObject.SetActive(true);\r\n           
+    this.StartCoroutine(this.Rolling(rollPlate));\r\n        });\r\n        this.popup.SetActive(false);\r\n       
+    rollPlate.gameObject.SetActive(false);\r\n        let gainBtns = this.gainPop.GetComponentsInChildren($typeof(UnityEngine_UI_1.Button));\r\n       
+    // let cnt = 0;\r\n        gainBtns.forEach((btn) => {\r\n            btn.onClick.AddListener(()
+    => {\r\n                btn.transform.parent.gameObject.SetActive(false);\r\n               
+    // this.hpPop.SetActive(true);\r\n                // this.gameObject.SetActive(false);\r\n           
+    });\r\n            // console.log(btn.transform.parent.name);\r\n           
+    btn.transform.parent.gameObject.SetActive(false);\r\n            this.gainPop.SetActive(false);\r\n           
+    // switch(cnt){\r\n            //     case 0:\r\n            //         break;\r\n           
+    // }\r\n            // cnt++;\r\n        });\r\n        this.gainPop.SetActive(false);\r\n       
+    // let hpBtns = this.hpPop.GetComponentsInChildren<Button>();\r\n        // hpBtns.forEach((btn)=>{\r\n       
+    //     btn.onClick.AddListener(()=>{\r\n        //         this.hpPop.SetActive(false);\r\n       
+    //         this.gameObject.SetActive(false);\r\n        //     });\r\n       
+    // });\r\n        // this.hpPop.SetActive(false);\r\n        this.spinDuration
+    = 2;\r\n        this.rotSpeed = 500;\r\n        this.bodyParts = new Array();\r\n       
+    this.goodPositions = new Array();\r\n        this.goodRotations = new Array();\r\n       
+    // wing\r\n        this.bodyParts.push(ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.transform.GetChild(0).GetChild(1).GetChild(2).GetChild(0));\r\n       
+    this.goodPositions.push(new UnityEngine_1.Vector3(-0.2, 0, -0.25));\r\n       
+    this.goodRotations.push(new UnityEngine_1.Vector3(0, 0, 90));\r\n        // dodam\r\n       
+    this.bodyParts.push(ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.transform.GetChild(0).GetChild(1).GetChild(2).GetChild(0).GetChild(1).GetChild(2).GetChild(1).GetChild(1).GetChild(0).GetChild(1).GetChild(0));\r\n       
+    this.goodPositions.push(new UnityEngine_1.Vector3(-0.25, 0.06, 0.05));\r\n       
+    this.goodRotations.push(new UnityEngine_1.Vector3(35, 0, 0));\r\n        //firefly\r\n       
+    this.bodyParts.push(ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.transform.GetChild(0).GetChild(1));\r\n       
+    this.goodPositions.push(new UnityEngine_1.Vector3(0, 0, 0));\r\n        this.goodRotations.push(new
+    UnityEngine_1.Vector3(0, 0, 0));\r\n        //RoketBullon\r\n        this.bodyParts.push(ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.transform.GetChild(0).GetChild(1).GetChild(2));
+    //3).GetChild(0).GetChild(1).GetChild(2).GetChild(1).GetChild(1).GetChild(0).GetChild(1).GetChild(0));\r\n       
+    this.goodPositions.push(new UnityEngine_1.Vector3(-0.388224691, -0.137299165,
+    -0.130949169));\r\n        this.goodRotations.push(new UnityEngine_1.Vector3(0.310774058,
+    358.70575, 82.2026443));\r\n        //flower\r\n        this.bodyParts.push(ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.transform.GetChild(0).GetChild(1).GetChild(2).GetChild(0).GetChild(1).GetChild(3).GetChild(1).GetChild(1).GetChild(0).GetChild(1).GetChild(0));\r\n       
+    this.goodPositions.push(new UnityEngine_1.Vector3(0.055, 0.055, -0.07));\r\n       
+    this.goodRotations.push(new UnityEngine_1.Vector3(0, 180, 90));\r\n        //Book\r\n       
+    this.bodyParts.push(ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.transform.GetChild(0).GetChild(1).GetChild(2).GetChild(0).GetChild(1).GetChild(3).GetChild(1).GetChild(1).GetChild(0).GetChild(1).GetChild(0));\r\n       
+    this.goodPositions.push(new UnityEngine_1.Vector3(0.16, 0.1, 0));\r\n       
+    this.goodRotations.push(new UnityEngine_1.Vector3(180, 0, 150));\r\n        this.showzone.SetActive(true);\r\n   
+    }\r\n    *Rolling(rollPlate) {\r\n        let crt = 0;\r\n        while (this.rotSpeed
+    > 5) {\r\n            yield new UnityEngine_1.WaitForSeconds(0.01);\r\n           
+    crt += UnityEngine_1.Time.deltaTime;\r\n            if (crt < (this.spinDuration
+    / 2))\r\n                this.rotSpeed *= 1.01;\r\n            else if (crt >
+    this.spinDuration)\r\n                this.rotSpeed *= 0.95;\r\n            //
+    console.log(\"this.rotSpeed \" + this.rotSpeed);\r\n            rollPlate.Rotate(0,
+    0, UnityEngine_1.Time.deltaTime * this.rotSpeed);\r\n        }\r\n        yield
+    new UnityEngine_1.WaitForSeconds(1);\r\n        this.gainPop.SetActive(true);\r\n       
+    let num = 0;\r\n        if ((330 < rollPlate.rotation.eulerAngles.z && rollPlate.rotation.eulerAngles.z
+    <= 360) || (0 <= rollPlate.rotation.eulerAngles.z && rollPlate.rotation.eulerAngles.z
+    <= 30)) {\r\n            // wing\r\n            num = 0;\r\n        }\r\n       
+    else if (30 < rollPlate.rotation.eulerAngles.z && rollPlate.rotation.eulerAngles.z
+    <= 90) {\r\n            // dodam\r\n            num = 1;\r\n        }\r\n       
+    else if (90 < rollPlate.rotation.eulerAngles.z && rollPlate.rotation.eulerAngles.z
+    <= 150) {\r\n            // firefly\r\n            num = 2;\r\n        }\r\n       
+    else if (150 < rollPlate.rotation.eulerAngles.z && rollPlate.rotation.eulerAngles.z
+    <= 210) {\r\n            // roket\r\n            num = 3;\r\n            // ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.ZepetoAnimator.SetBool(\"isHold\",
+    true);\r\n        }\r\n        else if (210 < rollPlate.rotation.eulerAngles.z
+    && rollPlate.rotation.eulerAngles.z <= 270) {\r\n            // flower\r\n           
+    num = 4;\r\n            ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.ZepetoAnimator.SetBool(\"isHold\",
+    true);\r\n        }\r\n        else if (270 < rollPlate.rotation.eulerAngles.z
+    && rollPlate.rotation.eulerAngles.z <= 330) {\r\n            // book\r\n           
+    num = 5;\r\n            ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.ZepetoAnimator.SetBool(\"isHold\",
+    true);\r\n        }\r\n        // console.log(\"get \" + this.gainPop.transform.GetChild(num).name
+    + \" \" + rollPlate.rotation.eulerAngles.z);\r\n        this.gainPop.transform.GetChild(num).gameObject.SetActive(true);\r\n       
+    let goodObj = UnityEngine_1.GameObject.Instantiate(this.goods[num]);\r\n       
+    goodObj.transform.SetParent(this.bodyParts[num]);\r\n        goodObj.transform.localPosition
+    = this.goodPositions[num];\r\n        goodObj.transform.localEulerAngles = this.goodRotations[num];\r\n       
+    // this.spinDuration = 3 + Random.Range(1,2);\r\n        this.rotSpeed = 500;\r\n       
+    rollPlate.gameObject.SetActive(false);\r\n        this.popup.SetActive(false);\r\n   
+    }\r\n}\r\nexports.default = RouletteGame;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiUm91bGV0dGVHYW1lLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiUm91bGV0dGVHYW1lLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQTBGO0FBQzFGLG1EQUF3QztBQUN4Qyw2RUFBNEQ7QUFDNUQsaURBQXFEO0FBRXJELE1BQXFCLFlBQWEsU0FBUSxxQ0FBcUI7SUFrQjNELEtBQUs7UUFDRCxJQUFJLENBQUMsUUFBUSxDQUFDLFNBQVMsQ0FBQyxNQUFNLENBQUMsWUFBWSxTQUFDLG9CQUFNLEdBQUksV0FBVyxHQUFHLDJDQUFhLENBQUMsUUFBUSxDQUFDLFlBQVksQ0FBQyxNQUFNLENBQUM7UUFFL0csSUFBSSxDQUFDLFFBQVEsQ0FBQyxPQUFPLENBQUMsV0FBVyxDQUFDLEdBQUUsRUFBRTtZQUNsQyw0REFBNEQ7WUFDNUQsSUFBSSxDQUFDLEtBQUssQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLENBQUM7UUFDL0IsQ0FBQyxDQUFDLENBQUM7UUFFSCxJQUFJLFNBQVMsR0FBRyxJQUFJLENBQUMsS0FBSyxDQUFDLFNBQVMsQ0FBQyxRQUFRLENBQUMsQ0FBQyxDQUFDLENBQUM7UUFDakQsSUFBSSxTQUFTLEdBQUcsSUFBSSxDQUFDLEtBQUssQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxDQUFDO1FBQ2pELElBQUksTUFBTSxHQUFHLFNBQVMsQ0FBQyx1QkFBdUIsU0FBQyx1QkFBTSxFQUFHLENBQUM7UUFDekQsTUFBTSxDQUFDLENBQUMsQ0FBQyxDQUFDLE9BQU8sQ0FBQyxXQUFXLENBQUMsR0FBRSxFQUFFO1lBQzlCLElBQUksQ0FBQyxLQUFLLENBQUMsU0FBUyxDQUFDLEtBQUssQ0FBQyxDQUFDO1FBQ2hDLENBQUMsQ0FBQyxDQUFDO1FBQ0gsTUFBTSxDQUFDLENBQUMsQ0FBQyxDQUFDLE9BQU8sQ0FBQyxXQUFXLENBQUMsR0FBRSxFQUFFO1lBQzlCLFNBQVMsQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFDLElB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","assetPath":"Assets/Script/RouletteGame.ts","manifest":{"properties":[{"assembly":"UnityEngine.UI","name":"popupBtn","type":"UnityEngine.UI.Button","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"showzone","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"popup","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"gainPop","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"goods","type":"UnityEngine.GameObject[]","isArray":true,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"RouletteGame","description":""},"isCompiled":true}'
+  typescriptHash: a510a6a7d935175614bc8a82bc05df42
+  onlyWriteTrigger: 0

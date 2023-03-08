@@ -1,0 +1,32 @@
+fileFormatVersion: 2
+guid: 9a880149edde3dd4f9b01ddd84b0f569
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst UnityEngine_1 = require(\\\"UnityEngine\\\");\\r\\nconst
+    ZEPETO_Character_Controller_1 = require(\\\"ZEPETO.Character.Controller\\\");\\r\\nconst
+    ZEPETO_Script_1 = require(\\\"ZEPETO.Script\\\");\\r\\nclass Dodam extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\\r\\n    Start() {\\r\\n        this.cam = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.ZepetoCamera.camera;
+    // \uC0DD\uC131\uB41C \uD50C\uB808\uC774\uC5B4\uC758 \uCE74\uBA54\uB77C \uAC00\uC838\uC624\uAE30\\r\\n       
+    this.GetComponent($typeof(UnityEngine_1.Canvas)).worldCamera = this.cam;\\r\\n       
+    this.yes.onClick.AddListener(() => {\\r\\n            this.no1.SetActive(true);\\r\\n       
+    });\\r\\n        this.but1.onClick.AddListener(() => {\\r\\n            this.no1.SetActive(false);\\r\\n       
+    });\\r\\n    }\\r\\n}\\r\\nexports.default = Dodam;\\r\\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRG9kYW0uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJEb2RhbS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDZDQUF5RDtBQUV6RCw2RUFBNEQ7QUFDNUQsaURBQXFEO0FBRXJELE1BQXFCLEtBQU0sU0FBUSxxQ0FBcUI7SUFRcEQsS0FBSztRQUNELElBQUksQ0FBQyxHQUFHLEdBQUcsMkNBQWEsQ0FBQyxRQUFRLENBQUMsWUFBWSxDQUFDLE1BQU0sQ0FBQyxDQUFJLHFCQUFxQjtRQUMvRSxJQUFJLENBQUMsWUFBWSxTQUFDLG9CQUFNLEdBQUksV0FBVyxHQUFHLElBQUksQ0FBQyxHQUFHLENBQUM7UUFFdkQsSUFBSSxDQUFDLEdBQUcsQ0FBQyxPQUFPLENBQUMsV0FBVyxDQUFDLEdBQUcsRUFBRTtZQUM5QixJQUFJLENBQUMsR0FBRyxDQUFDLFNBQVMsQ0FBQyxJQUFJLENBQUMsQ0FBQztRQUM3QixDQUFDLENBQUMsQ0FBQTtRQUNGLElBQUksQ0FBQyxJQUFJLENBQUMsT0FBTyxDQUFDLFdBQVcsQ0FBQyxHQUFHLEVBQUU7WUFDL0IsSUFBSSxDQUFDLEdBQUcsQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7UUFDOUIsQ0FBQyxDQUFDLENBQUE7SUFDRixDQUFDO0NBQ0o7QUFuQkQsd0JBbUJDIn0=\",\"assetPath\":\"Assets/Script/Dodam.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"UnityEngine.UI\",\"name\":\"but1\",\"type\":\"UnityEngine.UI.Button\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"cam\",\"type\":\"UnityEngine.Camera\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"yes\",\"type\":\"UnityEngine.UI.Button\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"no1\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]}],\"name\":\"Dodam\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: 924ef02032c73012d2b75731bbfbac8c
+  onlyWriteTrigger: 0

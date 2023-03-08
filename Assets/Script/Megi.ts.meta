@@ -1,0 +1,40 @@
+fileFormatVersion: 2
+guid: 1a08710f2ed427640afb1894f43093a8
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst UnityEngine_1 = require(\\\"UnityEngine\\\");\\r\\nconst
+    ZEPETO_Character_Controller_1 = require(\\\"ZEPETO.Character.Controller\\\");\\r\\nconst
+    ZEPETO_Script_1 = require(\\\"ZEPETO.Script\\\");\\r\\nclass Megi extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\\r\\n    // public active : Button;\\r\\n    Start() {\\r\\n        this.cam
+    = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.ZepetoCamera.camera; //
+    \uC0DD\uC131\uB41C \uD50C\uB808\uC774\uC5B4\uC758 \uCE74\uBA54\uB77C \uAC00\uC838\uC624\uAE30\\r\\n       
+    console.log(this.cam);\\r\\n        console.log('camera setting');\\r\\n       
+    this.GetComponent($typeof(UnityEngine_1.Canvas)).worldCamera = this.cam;\\r\\n       
+    // this.yes.gameObject.SetActive(false);\\r\\n        // this.active.onClick.AddListener(()
+    => {\\r\\n        //     this.yes.gameObject.SetActive(true);\\r\\n        //
+    })\\r\\n        this.yes.onClick.AddListener(() => {\\r\\n            console.log(`\uB204\uB974\uB2E4
+    \uBC84\uD2BC`);\\r\\n            this.no1.SetActive(true);\\r\\n            this.yes.gameObject.SetActive(false);\\r\\n       
+    });\\r\\n        this.but1.onClick.AddListener(() => {\\r\\n            this.no1.SetActive(false);\\r\\n           
+    this.no2.SetActive(true);\\r\\n        });\\r\\n        this.but2.onClick.AddListener(()
+    => {\\r\\n            this.no2.SetActive(false);\\r\\n            this.no3.SetActive(true);\\r\\n       
+    });\\r\\n        this.but3.onClick.AddListener(() => {\\r\\n            this.no3.SetActive(false);\\r\\n       
+    });\\r\\n    }\\r\\n}\\r\\nexports.default = Megi;\\r\\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiTWVnaS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIk1lZ2kudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSw2Q0FBeUQ7QUFFekQsNkVBQTREO0FBQzVELGlEQUFxRDtBQUVyRCxNQUFxQixJQUFLLFNBQVEscUNBQXFCO0lBVW5ELDBCQUEwQjtJQUcxQixLQUFLO1FBQ0QsSUFBSSxDQUFDLEdBQUcsR0FBRywyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxZQUFZLENBQUMsTUFBTSxDQUFDLENBQUkscUJBQXFCO1FBQy9FLE9BQU8sQ0FBQyxHQUFHLENBQUMsSUFBSSxDQUFDLEdBQUcsQ0FBQyxDQUFDO1FBQ3RCLE9BQU8sQ0FBQyxHQUFHLENBQUMsZ0JBQWdCLENBQUMsQ0FBQztRQUM5QixJQUFJLENBQUMsWUFBWSxTQUFDLG9CQUFNLEdBQUksV0FBVyxHQUFHLElBQUksQ0FBQyxHQUFHLENBQUM7UUFDbkQsd0NBQXdDO1FBRTVDLDBDQUEwQztRQUMxQywyQ0FBMkM7UUFDM0MsS0FBSztRQUVMLElBQUksQ0FBQyxHQUFHLENBQUMsT0FBTyxDQUFDLFdBQVcsQ0FBQyxHQUFHLEVBQUU7WUFDOUIsT0FBTyxDQUFDLEdBQUcsQ0FBQyxRQUFRLENBQUMsQ0FBQztZQUN0QixJQUFJLENBQUMsR0FBRyxDQUFDLFNBQVMsQ0FBQyxJQUFJLENBQUMsQ0FBQztZQUN6QixJQUFJLENBQUMsR0FBRyxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7UUFDekMsQ0FBQyxDQUFDLENBQUE7UUFDRixJQUFJLENBQUMsSUFBSSxDQUFDLE9BQU8sQ0FBQyxXQUFXLENBQUMsR0FBRyxFQUFFO1lBQy9CLElBQUksQ0FBQyxHQUFHLENBQUMsU0FBUyxDQUFDLEtBQUssQ0FBQyxDQUFDO1lBQzFCLElBQUksQ0FBQyxHQUFHLENBQUMsU0FBUyxDQUFDLElBQUksQ0FBQyxDQUFDO1FBQzdCLENBQUMsQ0FBQyxDQUFBO1FBQ0YsSUFBSSxDQUFDLElBQUksQ0FBQyxPQUFPLENBQUMsV0FBVyxDQUFDLEdBQUcsRUFBRTtZQUMvQixJQUFJLENBQUMsR0FBRyxDQUFDLFNBQVMsQ0FBQyxLQUFLLENBQUMsQ0FBQztZQUMxQixJQUFJLENBQUMsR0FBRyxDQUFDLFNBQVMsQ0FBQyxJQUFJLENBQUMsQ0FBQztRQUM3QixDQUFDLENBQUMsQ0FBQTtRQUNGLElBQUksQ0FBQyxJQUFJLENBQUMsT0FBTyxDQUFDLFdBQVcsQ0FBQyxHQUFHLEVBQUU7WUFDL0IsSUFBSSxDQUFDLEdBQUcsQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7UUFDOUIsQ0FBQyxDQUFDLENBQUE7SUFDRixDQUFDO0NBQ0o7QUF6Q0QsdUJBeUNDIn0=\",\"assetPath\":\"Assets/Script/Megi.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"UnityEngine.UI\",\"name\":\"but1\",\"type\":\"UnityEngine.UI.Button\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"but2\",\"type\":\"UnityEngine.UI.Button\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"but3\",\"type\":\"UnityEngine.UI.Button\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"cam\",\"type\":\"UnityEngine.Camera\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"yes\",\"type\":\"UnityEngine.UI.Button\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"no1\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"no2\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"no3\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]}],\"name\":\"Megi\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: 1b1089393c8375ae6726e0cbf0fccdd5
+  onlyWriteTrigger: 0

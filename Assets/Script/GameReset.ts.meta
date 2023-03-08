@@ -1,0 +1,38 @@
+fileFormatVersion: 2
+guid: 03ea8cb10837e5944a56f23ed6866b13
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst Timer_1 = require(\"./Timer\");\r\nconst
+    MovieSetGameManager_1 = require(\"./MovieSetGameManager\");\r\nclass GameReset
+    extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start() {\r\n        this.toShow.SetActive(false);\r\n   
+    }\r\n    // private *init(){\r\n    //     yield new WaitForSeconds(2);\r\n   
+    //     this.toShow.SetActive(false);\r\n    // }\r\n    OnTriggerEnter(coll)
+    {\r\n        if (coll.gameObject.tag == \"Player\") {\r\n            this.toShow.SetActive(true);\r\n       
+    }\r\n    }\r\n    OnTriggerExit(coll) {\r\n        if (coll.gameObject.tag ==
+    \"Player\") {\r\n            if (this.Timer != null) {\r\n                this.Timer.GetComponent($typeof(Timer_1.default)).TimerReset(false);\r\n           
+    }\r\n            this.gameObject.GetComponent($typeof(UnityEngine_1.Collider)).enabled
+    = false;\r\n            this.StartCoroutine(this.YieldOut());\r\n        }\r\n   
+    }\r\n    *YieldOut() {\r\n        yield new UnityEngine_1.WaitForSeconds(0.3);\r\n       
+    this.toShow.SetActive(false);\r\n        this.gameObject.GetComponent($typeof(UnityEngine_1.Collider)).enabled
+    = true;\r\n        this.StopCoroutine(this.YieldOut());\r\n    }\r\n}\r\nexports.default
+    = GameReset;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiR2FtZVJlc2V0LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiR2FtZVJlc2V0LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQW1GO0FBQ25GLGlEQUFxRDtBQUNyRCxtQ0FBNEI7QUFDNUIsK0RBQXdEO0FBRXhELE1BQXFCLFNBQVUsU0FBUSxxQ0FBcUI7SUFLeEQsS0FBSztRQUNELElBQUksQ0FBQyxNQUFNLENBQUMsU0FBUyxDQUFDLEtBQUssQ0FBQyxDQUFDO0lBQ2pDLENBQUM7SUFDRCxtQkFBbUI7SUFDbkIsbUNBQW1DO0lBQ25DLG9DQUFvQztJQUNwQyxJQUFJO0lBRUosY0FBYyxDQUFDLElBQWU7UUFDMUIsSUFBSSxJQUFJLENBQUMsVUFBVSxDQUFDLEdBQUcsSUFBSSxRQUFRLEVBQUM7WUFDaEMsSUFBSSxDQUFDLE1BQU0sQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLENBQUM7U0FDL0I7SUFDTCxDQUFDO0lBRUQsYUFBYSxDQUFDLElBQWU7UUFDekIsSUFBSSxJQUFJLENBQUMsVUFBVSxDQUFDLEdBQUcsSUFBSSxRQUFRLEVBQUM7WUFDaEMsSUFBSSxJQUFJLENBQUMsS0FBSyxJQUFJLElBQUksRUFBQztnQkFDbkIsSUFBSSxDQUFDLEtBQUssQ0FBQyxZQUFZLFNBQUMsZUFBSyxHQUFJLFVBQVUsQ0FBQyxLQUFLLENBQUMsQ0FBQzthQUN0RDtZQUNELElBQUksQ0FBQyxVQUFVLENBQUMsWUFBWSxTQUFDLHNCQUFRLEdBQUksT0FBTyxHQUFHLEtBQUssQ0FBQztZQUN6RCxJQUFJLENBQUMsY0FBYyxDQUFDLElBQUksQ0FBQyxRQUFRLEVBQUUsQ0FBQyxDQUFDO1NBQ3hDO0lBQ0wsQ0FBQztJQUVPLENBQUMsUUFBUTtRQUNiLE1BQU0sSUFBSSw0QkFBYyxDQUFDLEdBQUcsQ0FBQyxDQUFDO1FBQzlCLElBQUksQ0FBQyxNQUFNLENBQUMsU0FBUyxDQUFDLEtBQUssQ0FBQyxDQUFDO1FBQzdCLElBQUksQ0FBQyxVQUFVLENBQUMsWUFBWSxTQUFDLHNCQUFRLEdBQUksT0FBTyxHQUFHLElBQUksQ0FBQztRQUN4RCxJQUFJLENBQUMsYUFBYSxDQUFDLElBQUksQ0FBQyxRQUFRLEVBQUUsQ0FBQyxDQUFDO0lBQ3hDLENBQUM7Q0FDSjtBQW5DRCw0QkFtQ0MifQ==","assetPath":"Assets/Script/GameReset.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"Timer","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"toShow","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"GameReset","description":""},"isCompiled":true}'
+  typescriptHash: 65a7ba7f704613a5253b3843477e182b
+  onlyWriteTrigger: 0

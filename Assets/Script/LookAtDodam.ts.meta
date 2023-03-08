@@ -1,0 +1,34 @@
+fileFormatVersion: 2
+guid: d37e5c4dd4108ff49a4389b2468a8954
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass LookAt extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    // public targetV:Vector3;\r\n    LookAtStart() {\r\n        this.StartCoroutine(this.LootAtCharacter());\r\n   
+    }\r\n    LookAtStop() {\r\n        this.StopCoroutine(this.LootAtCharacter());\r\n   
+    }\r\n    *LootAtCharacter() {\r\n        console.log(\"LookAt \" + this.transform.name);\r\n       
+    while (true) {\r\n            yield new UnityEngine_1.WaitForSeconds(0.001);\r\n           
+    let target = new UnityEngine_1.Vector3(ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.transform.position.x,
+    this.transform.position.y, ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.transform.position.z);\r\n           
+    this.movingObject.transform.LookAt(target);\r\n        }\r\n    }\r\n}\r\nexports.default
+    = LookAt;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiTG9va0F0RG9kYW0uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJMb29rQXREb2RhbS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDZDQUEyRTtBQUMzRSw2RUFBNEQ7QUFDNUQsaURBQXFEO0FBRXJELE1BQXFCLE1BQU8sU0FBUSxxQ0FBcUI7SUFHckQsMEJBQTBCO0lBR25CLFdBQVc7UUFDZCxJQUFJLENBQUMsY0FBYyxDQUFDLElBQUksQ0FBQyxlQUFlLEVBQUUsQ0FBQyxDQUFDO0lBQ2hELENBQUM7SUFFTSxVQUFVO1FBQ2IsSUFBSSxDQUFDLGFBQWEsQ0FBQyxJQUFJLENBQUMsZUFBZSxFQUFFLENBQUMsQ0FBQztJQUMvQyxDQUFDO0lBRUQsQ0FBQyxlQUFlO1FBQ1osT0FBTyxDQUFDLEdBQUcsQ0FBQyxTQUFTLEdBQUcsSUFBSSxDQUFDLFNBQVMsQ0FBQyxJQUFJLENBQUMsQ0FBQztRQUM3QyxPQUFNLElBQUksRUFBQztZQUNQLE1BQU0sSUFBSSw0QkFBYyxDQUFDLEtBQUssQ0FBQyxDQUFBO1lBQy9CLElBQUksTUFBTSxHQUFHLElBQUkscUJBQU8sQ0FBQywyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxXQUFXLENBQUMsWUFBWSxDQUFDLFNBQVMsQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLENBQUMsRUFBRSxJQUFJLENBQUMsU0FBUyxDQUFDLFFBQVEsQ0FBQyxDQUFDLEVBQUMsMkNBQWEsQ0FBQyxRQUFRLENBQUMsV0FBVyxDQUFDLFlBQVksQ0FBQyxTQUFTLENBQUMsU0FBUyxDQUFDLFFBQVEsQ0FBQyxDQUFDLENBQUMsQ0FBQTtZQUNsTixJQUFJLENBQUMsWUFBWSxDQUFDLFNBQVMsQ0FBQyxNQUFNLENBQUMsTUFBTSxDQUFDLENBQUM7U0FDOUM7SUFDTCxDQUFDO0NBR0o7QUF4QkQseUJBd0JDIn0=","assetPath":"Assets/Script/LookAtDodam.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"movingObject","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"LookAt","description":""},"isCompiled":true}'
+  typescriptHash: 5919a20d6661be07bcb19ed4019e0699
+  onlyWriteTrigger: 0

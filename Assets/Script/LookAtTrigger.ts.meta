@@ -1,0 +1,33 @@
+fileFormatVersion: 2
+guid: 538a28d748e785b4abdd83c1ceb79f45
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    LookAtDodam_1 = require(\"./LookAtDodam\");\r\nclass LookAtTrigger extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    // private lookAt:LookAt;\r\n    // Start(){\r\n    //     if(!this.transform.parent.TryGetComponent<LookAt>(null)){\r\n   
+    //         console.log(\"looAt null \" + this.transform.parent.name);\r\n   
+    //     }\r\n    //     this.lookAt = this.transform.parent.GetComponent<LookAt>();\r\n   
+    // }\r\n    OnTriggerEnter(coll) {\r\n        if (coll.gameObject.tag == \"Player\")
+    {\r\n            this.transform.parent.GetComponent($typeof(LookAtDodam_1.default)).LookAtStart();\r\n       
+    }\r\n    }\r\n    OnTriggerExit(coll) {\r\n        if (coll.gameObject.tag ==
+    \"Player\") {\r\n            this.transform.parent.GetComponent($typeof(LookAtDodam_1.default)).LookAtStop();\r\n       
+    }\r\n    }\r\n}\r\nexports.default = LookAtTrigger;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiTG9va0F0VHJpZ2dlci5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkxvb2tBdFRyaWdnZXIudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFDQSxpREFBcUQ7QUFDckQsK0NBQW1DO0FBRW5DLE1BQXFCLGFBQWMsU0FBUSxxQ0FBcUI7SUFFNUQseUJBQXlCO0lBRXpCLFdBQVc7SUFDWCxnRUFBZ0U7SUFDaEUsbUVBQW1FO0lBQ25FLFFBQVE7SUFDUixrRUFBa0U7SUFDbEUsSUFBSTtJQUVKLGNBQWMsQ0FBQyxJQUFlO1FBQzFCLElBQUksSUFBSSxDQUFDLFVBQVUsQ0FBQyxHQUFHLElBQUksUUFBUSxFQUFDO1lBQ2hDLElBQUksQ0FBQyxTQUFTLENBQUMsTUFBTSxDQUFDLFlBQVksU0FBQyxxQkFBTSxHQUFJLFdBQVcsRUFBRSxDQUFDO1NBQzlEO0lBQ0wsQ0FBQztJQUVELGFBQWEsQ0FBQyxJQUFlO1FBQ3pCLElBQUksSUFBSSxDQUFDLFVBQVUsQ0FBQyxHQUFHLElBQUksUUFBUSxFQUFDO1lBQ2hDLElBQUksQ0FBQyxTQUFTLENBQUMsTUFBTSxDQUFDLFlBQVksU0FBQyxxQkFBTSxHQUFJLFVBQVUsRUFBRSxDQUFDO1NBQzdEO0lBQ0wsQ0FBQztDQUVKO0FBdkJELGdDQXVCQyJ9","assetPath":"Assets/Script/LookAtTrigger.ts","manifest":{"properties":[],"name":"LookAtTrigger","description":""},"isCompiled":true}'
+  typescriptHash: 0c2d5fc23de126672ba1e6eaca3807fd
+  onlyWriteTrigger: 0

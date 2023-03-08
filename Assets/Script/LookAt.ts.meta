@@ -1,0 +1,37 @@
+fileFormatVersion: 2
+guid: 19cb76221af5df34180411af8139aa3c
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass LookAt extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    // private Stater : ClientStarter;\r\n    // Start() {\r\n    //    
+    // this.transform.parent.GetComponent<Canvas>().worldCamera = ZepetoPlayers.instance.ZepetoCamera.camera;\r\n   
+    //     this.StartCoroutine(this.LookAt());\r\n    // }\r\n    // private *LookAt(){\r\n   
+    //     while(true){\r\n    //         yield new WaitForSeconds(0.01);\r\n   
+    //         this.transform.LookAt(ZepetoPlayers.instance.LocalPlayer.zepetoCamera.cameraParent.GetChild(0).transform.position);\r\n   
+    //     }\r\n    // }\r\n    Update() {\r\n        // if (this.Stater.isGameStart
+    == null){\r\n        //     console.log(\"isGameStart \" + this.transform.name);\r\n       
+    // }\r\n        // if (this.Stater.isGameStart != true) {\r\n        //     return;\r\n       
+    // }\r\n        // console.log(this.transform.parent.parent.name + this.transform.parent.name
+    + this.transform.name);\r\n        this.transform.LookAt(ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoCamera.cameraParent.GetChild(0).transform.position);\r\n       
+    // console.log(ZepetoPlayers.instance.LocalPlayer.zepetoCamera.cameraParent.GetChild(0).transform.position);\r\n   
+    }\r\n}\r\nexports.default = LookAt;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiTG9va0F0LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiTG9va0F0LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBRUEsNkVBQTBFO0FBQzFFLGlEQUFxRDtBQUdyRCxNQUFxQixNQUFPLFNBQVEscUNBQXFCO0lBSXJELGtDQUFrQztJQUNsQyxZQUFZO0lBQ1osZ0hBQWdIO0lBQ2hILDBDQUEwQztJQUMxQyxJQUFJO0lBRUoscUJBQXFCO0lBQ3JCLG1CQUFtQjtJQUNuQiwwQ0FBMEM7SUFDMUMsOEhBQThIO0lBQzlILFFBQVE7SUFDUixJQUFJO0lBQ0osTUFBTTtRQUNGLHdDQUF3QztRQUN4Qyx5REFBeUQ7UUFDekQsSUFBSTtRQUNKLHlDQUF5QztRQUN6QyxjQUFjO1FBQ2QsSUFBSTtRQUNKLHFHQUFxRztRQUNyRyxJQUFJLENBQUMsU0FBUyxDQUFDLE1BQU0sQ0FBQywyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxXQUFXLENBQUMsWUFBWSxDQUFDLFlBQVksQ0FBQyxRQUFRLENBQUMsQ0FBQyxDQUFDLENBQUMsU0FBUyxDQUFDLFFBQVEsQ0FBQyxDQUFDO1FBQ25ILDRHQUE0RztJQUNoSCxDQUFDO0NBQ0o7QUEzQkQseUJBMkJDIn0=","assetPath":"Assets/Script/LookAt.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"movingObject","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"LookAt","description":""},"isCompiled":true}'
+  typescriptHash: 9357811b2aa521f9ea883020424e6f4f
+  onlyWriteTrigger: 0

@@ -1,0 +1,38 @@
+fileFormatVersion: 2
+guid: 64a9688a29e7d1d4d807849c770d258b
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst
+    UnityEngine_1 = require(\"UnityEngine\");\r\nconst ClientStarter_1 = require(\"../../ZepetoScripts/Multiplay/ClientStarter\");\r\nclass
+    fishmove extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start() {\r\n       
+    this.Stater = (UnityEngine_1.GameObject.Find(\"ClientStarter\")).GetComponent($typeof(ClientStarter_1.default));\r\n       
+    this.distance = 10 + (Math.random() * 5);\r\n        this.speed = 0.01 + Math.random()
+    * 0.01;\r\n    }\r\n    Update() {\r\n        if (!this.Stater.isGameStart ||
+    this.transform == null)\r\n            return;\r\n        if (this.distanceTravelled
+    > this.distance) {\r\n            if (this.isTurn == true) {\r\n               
+    this.isTurn = false;\r\n                this.fish.transform.Rotate(new UnityEngine_1.Vector3(0,
+    180, 0));\r\n                this.distanceTravelled = 0;\r\n            }\r\n           
+    else if (this.isTurn == false) {\r\n                this.isTurn = true;\r\n               
+    this.fish.transform.Rotate(new UnityEngine_1.Vector3(0, 180, 0));\r\n               
+    this.distanceTravelled = 0;\r\n            }\r\n        }\r\n        this.transform.Translate(this.speed,
+    0, 0);\r\n        this.distanceTravelled += this.speed;\r\n    }\r\n}\r\nexports.default
+    = fishmove;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZmlzaG1vdmUuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJmaXNobW92ZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLGlEQUFtRDtBQUNuRCw2Q0FBbUQ7QUFDbkQsK0VBQXdFO0FBQ3hFLE1BQXFCLFFBQVMsU0FBUSxxQ0FBcUI7SUFTdkQsS0FBSztRQUNELElBQUksQ0FBQyxNQUFNLEdBQUcsQ0FBQyx3QkFBVSxDQUFDLElBQUksQ0FBQyxlQUFlLENBQUMsQ0FBQyxDQUFDLFlBQVksU0FBQyx1QkFBYSxFQUFHLENBQUM7UUFFL0UsSUFBSSxDQUFDLFFBQVEsR0FBRyxFQUFFLEdBQUcsQ0FBQyxJQUFJLENBQUMsTUFBTSxFQUFFLEdBQUcsQ0FBQyxDQUFDLENBQUM7UUFDekMsSUFBSSxDQUFDLEtBQUssR0FBRyxJQUFJLEdBQUcsSUFBSSxDQUFDLE1BQU0sRUFBRSxHQUFHLElBQUksQ0FBQztJQUM3QyxDQUFDO0lBRUQsTUFBTTtRQUNGLElBQUksQ0FBQyxJQUFJLENBQUMsTUFBTSxDQUFDLFdBQVcsSUFBSSxJQUFJLENBQUMsU0FBUyxJQUFJLElBQUk7WUFBRSxPQUFPO1FBQy9ELElBQUcsSUFBSSxDQUFDLGlCQUFpQixHQUFHLElBQUksQ0FBQyxRQUFRLEVBQUM7WUFDdEMsSUFBRyxJQUFJLENBQUMsTUFBTSxJQUFJLElBQUksRUFBQztnQkFDbkIsSUFBSSxDQUFDLE1BQU0sR0FBRyxLQUFLLENBQUM7Z0JBQ3BCLElBQUksQ0FBQyxJQUFJLENBQUMsU0FBUyxDQUFDLE1BQU0sQ0FBQyxJQUFJLHFCQUFPLENBQUMsQ0FBQyxFQUFDLEdBQUcsRUFBQyxDQUFDLENBQUMsQ0FBQyxDQUFDO2dCQUNqRCxJQUFJLENBQUMsaUJBQWlCLEdBQUcsQ0FBQyxDQUFDO2FBQzlCO2lCQUFLLElBQUcsSUFBSSxDQUFDLE1BQU0sSUFBSSxLQUFLLEVBQUM7Z0JBQzFCLElBQUksQ0FBQyxNQUFNLEdBQUcsSUFBSSxDQUFDO2dCQUNuQixJQUFJLENBQUMsSUFBSSxDQUFDLFNBQVMsQ0FBQyxNQUFNLENBQUMsSUFBSSxxQkFBTyxDQUFDLENBQUMsRUFBQyxHQUFHLEVBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQztnQkFDakQsSUFBSSxDQUFDLGlCQUFpQixHQUFHLENBQUMsQ0FBQzthQUM5QjtTQUNKO1FBQ0QsSUFBSSxDQUFDLFNBQVMsQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLEtBQUssRUFBQyxDQUFDLEVBQUMsQ0FBQyxDQUFDLENBQUM7UUFDekMsSUFBSSxDQUFDLGlCQUFpQixJQUFJLElBQUksQ0FBQyxLQUFLLENBQUM7SUFDekMsQ0FBQztDQXNDSjtBQXJFRCwyQkFxRUMifQ==","assetPath":"Assets/give_dream/function_code/fishmove.ts","manifest":{"properties":[{"assembly":"mscorlib","name":"distance","type":"System.Single","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"isTurn","type":"System.Boolean","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"speed","type":"System.Single","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"distanceTravelled","type":"System.Single","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"fish","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"fishmove","description":""},"isCompiled":true}'
+  typescriptHash: 4d34d5b23f656be29860ea0f47d8a969
+  onlyWriteTrigger: 0

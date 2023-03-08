@@ -1,0 +1,33 @@
+fileFormatVersion: 2
+guid: 72d1c2d2c7e74a5448562c95e386562b
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst ClientStarter_1 = require(\"../ZepetoScripts/Multiplay/ClientStarter\");\r\nclass
+    singingroomLight extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    constructor()
+    {\r\n        super(...arguments);\r\n        this.speed = 1;\r\n    }\r\n   
+    Start() {\r\n        this.StartCoroutine(this.Rotate);\r\n    }\r\n    *Rotate()
+    {\r\n        while (this.gameObject.activeSelf) {\r\n            yield null;\r\n           
+    this.transform.Rotate(new UnityEngine_1.Vector3(0, 0, (this.speed + UnityEngine_1.Time.deltaTime)));\r\n           
+    if (this.speed > 360)\r\n                this.speed = 0;\r\n        }\r\n       
+    this.StopCoroutine(this.Rotate);\r\n    }\r\n}\r\nexports.default = singingroomLight;\r\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2luZ2luZ3Jvb21MaWdodC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbInNpbmdpbmdyb29tTGlnaHQudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSw2Q0FBb0U7QUFDcEUsaURBQXFEO0FBQ3JELDRFQUFxRTtBQUVyRSxNQUFxQixnQkFBaUIsU0FBUSxxQ0FBcUI7SUFBbkU7O1FBRVksVUFBSyxHQUFZLENBQUMsQ0FBQztJQWMvQixDQUFDO0lBWlUsS0FBSztRQUNSLElBQUksQ0FBQyxjQUFjLENBQUMsSUFBSSxDQUFDLE1BQU0sQ0FBQyxDQUFDO0lBQ3JDLENBQUM7SUFFTSxDQUFDLE1BQU07UUFDVixPQUFNLElBQUksQ0FBQyxVQUFVLENBQUMsVUFBVSxFQUFDO1lBQzdCLE1BQU0sSUFBSSxDQUFBO1lBQ1YsSUFBSSxDQUFDLFNBQVMsQ0FBQyxNQUFNLENBQUMsSUFBSSxxQkFBTyxDQUFDLENBQUMsRUFBRSxDQUFDLEVBQUUsQ0FBQyxJQUFJLENBQUMsS0FBSyxHQUFHLGtCQUFJLENBQUMsU0FBUyxDQUFDLENBQUMsQ0FBQyxDQUFDO1lBQ3hFLElBQUksSUFBSSxDQUFDLEtBQUssR0FBRyxHQUFHO2dCQUFFLElBQUksQ0FBQyxLQUFLLEdBQUcsQ0FBQyxDQUFDO1NBQ3hDO1FBQ0QsSUFBSSxDQUFDLGFBQWEsQ0FBQyxJQUFJLENBQUMsTUFBTSxDQUFDLENBQUM7SUFDcEMsQ0FBQztDQUNKO0FBaEJELG1DQWdCQyJ9","assetPath":"Assets/Script/singingroomLight.ts","manifest":{"properties":[],"name":"singingroomLight","description":""},"isCompiled":true}'
+  typescriptHash: 81c6379a694b3e1e797b1c194bb83ada
+  onlyWriteTrigger: 0

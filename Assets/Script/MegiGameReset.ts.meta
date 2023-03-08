@@ -1,0 +1,37 @@
+fileFormatVersion: 2
+guid: 7493169d4beb7c14aaeaf5599426c7fb
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst HandleBook_1 = require(\"./HandleBook\");\r\nclass
+    MegiGameReset extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start()
+    {\r\n        this.toShow.SetActive(false);\r\n    }\r\n    // private *init(){\r\n   
+    //     yield new WaitForSeconds(2);\r\n    //     this.toShow.SetActive(false);\r\n   
+    // }\r\n    OnTriggerEnter(coll) {\r\n        if (coll.gameObject.tag == \"Player\")
+    {\r\n            this.toShow.SetActive(true);\r\n        }\r\n    }\r\n    OnTriggerExit(coll)
+    {\r\n        if (coll.gameObject.tag == \"Player\") {\r\n            this.toShow.GetComponent($typeof(HandleBook_1.default)).ResetGame();\r\n           
+    this.gameObject.GetComponent($typeof(UnityEngine_1.Collider)).enabled = false;\r\n           
+    this.StartCoroutine(this.YieldOut());\r\n        }\r\n    }\r\n    *YieldOut()
+    {\r\n        yield new UnityEngine_1.WaitForSeconds(0.3);\r\n        this.toShow.SetActive(false);\r\n       
+    this.gameObject.GetComponent($typeof(UnityEngine_1.Collider)).enabled = true;\r\n       
+    this.StopCoroutine(this.YieldOut());\r\n    }\r\n}\r\nexports.default = MegiGameReset;\r\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiTWVnaUdhbWVSZXNldC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIk1lZ2lHYW1lUmVzZXQudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSw2Q0FBbUY7QUFDbkYsaURBQXFEO0FBQ3JELDZDQUFzQztBQUV0QyxNQUFxQixhQUFjLFNBQVEscUNBQXFCO0lBSTVELEtBQUs7UUFDRCxJQUFJLENBQUMsTUFBTSxDQUFDLFNBQVMsQ0FBQyxLQUFLLENBQUMsQ0FBQztJQUNqQyxDQUFDO0lBQ0QsbUJBQW1CO0lBQ25CLG1DQUFtQztJQUNuQyxvQ0FBb0M7SUFDcEMsSUFBSTtJQUVKLGNBQWMsQ0FBQyxJQUFlO1FBQzFCLElBQUksSUFBSSxDQUFDLFVBQVUsQ0FBQyxHQUFHLElBQUksUUFBUSxFQUFDO1lBQ2hDLElBQUksQ0FBQyxNQUFNLENBQUMsU0FBUyxDQUFDLElBQUksQ0FBQyxDQUFDO1NBQy9CO0lBQ0wsQ0FBQztJQUVELGFBQWEsQ0FBQyxJQUFlO1FBQ3pCLElBQUksSUFBSSxDQUFDLFVBQVUsQ0FBQyxHQUFHLElBQUksUUFBUSxFQUFDO1lBQ2hDLElBQUksQ0FBQyxNQUFNLENBQUMsWUFBWSxTQUFDLG9CQUFVLEdBQUksU0FBUyxFQUFFLENBQUM7WUFDbkQsSUFBSSxDQUFDLFVBQVUsQ0FBQyxZQUFZLFNBQUMsc0JBQVEsR0FBSSxPQUFPLEdBQUcsS0FBSyxDQUFDO1lBQ3pELElBQUksQ0FBQyxjQUFjLENBQUMsSUFBSSxDQUFDLFFBQVEsRUFBRSxDQUFDLENBQUM7U0FDeEM7SUFDTCxDQUFDO0lBRU8sQ0FBQyxRQUFRO1FBQ2IsTUFBTSxJQUFJLDRCQUFjLENBQUMsR0FBRyxDQUFDLENBQUM7UUFDOUIsSUFBSSxDQUFDLE1BQU0sQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7UUFDN0IsSUFBSSxDQUFDLFVBQVUsQ0FBQyxZQUFZLFNBQUMsc0JBQVEsR0FBSSxPQUFPLEdBQUcsSUFBSSxDQUFDO1FBQ3hELElBQUksQ0FBQyxhQUFhLENBQUMsSUFBSSxDQUFDLFFBQVEsRUFBRSxDQUFDLENBQUM7SUFDeEMsQ0FBQztDQUNKO0FBaENELGdDQWdDQyJ9","assetPath":"Assets/Script/MegiGameReset.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"toShow","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"MegiGameReset","description":""},"isCompiled":true}'
+  typescriptHash: e58624021a638268e64ee2aec11f2598
+  onlyWriteTrigger: 0

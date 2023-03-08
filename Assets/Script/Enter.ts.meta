@@ -1,0 +1,47 @@
+fileFormatVersion: 2
+guid: 9ad9a50881777954aaa549b44ec54c80
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst ZEPETO_Character_Controller_1
+    = require(\\\"ZEPETO.Character.Controller\\\");\\r\\nconst ZEPETO_Script_1 =
+    require(\\\"ZEPETO.Script\\\");\\r\\nclass Enter extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\\r\\n    //hitBox\uC758 collider\uC5D0 \uB2FF\uC73C\uBA74 \uC9C0\uC815\uB41C
+    \uC704\uCE58\uB85C \uD154\uB808\uD3EC\uD2B8\uD558\uB294 \uB85C\uC9C1\\r\\n   
+    // private Stater : ClientStarter;\\r\\n    Start() {\\r\\n        // this.Stater
+    = (GameObject.Find(\\\"ClientStarter\\\")).GetComponent<ClientStarter>();\\r\\n       
+    //\uD0C0\uAC9F \uC624\uBE0C\uC81D\uD2B8\uC758 Vector3 \uAC12\uC744 \uC800\uC7A5\\r\\n       
+    // this.transform.GetComponent<BoxCollider>().enabled = false;\\r\\n        this.loadingimg.SetActive(true);\\r\\n       
+    this.toPC.onClick.AddListener(() => {\\r\\n            this.toPCobj.SetActive(true);\\r\\n           
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.StopMoving();\\r\\n           
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.Teleport(this.toPCobj.transform.position,
+    this.toPCobj.transform.rotation);\\r\\n            this.enterpopup.SetActive(false);\\r\\n       
+    });\\r\\n        this.toPCobj.SetActive(false);\\r\\n        this.toGaraoke.onClick.AddListener(()
+    => {\\r\\n            this.toGaraokeobj.SetActive(true);\\r\\n            ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.StopMoving();\\r\\n           
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.Teleport(this.toGaraokeobj.transform.position,
+    this.toGaraokeobj.transform.rotation);\\r\\n            this.enterpopup.SetActive(false);\\r\\n       
+    });\\r\\n        this.toGaraokeobj.SetActive(false);\\r\\n        this.transform.GetChild(0).gameObject.SetActive(false);\\r\\n       
+    // this.StartCoroutine(this.init());\\r\\n    }\\r\\n    // private *init(){\\r\\n   
+    //     // while(!this.Stater.isGameStart){\\r\\n    //     //     yield new WaitForSeconds();\\r\\n   
+    //     // }\\r\\n    //     this.StopCoroutine(this.init());\\r\\n    // }\\r\\n   
+    OnTriggerEnter(coll) {\\r\\n        if (coll.gameObject.tag == \\\"Player\\\")
+    {\\r\\n            this.loadingimg.SetActive(false);\\r\\n            this.enterpopup.SetActive(true);\\r\\n       
+    }\\r\\n    }\\r\\n}\\r\\nexports.default = Enter;\\r\\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRW50ZXIuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJFbnRlci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUVBLDZFQUE0RDtBQUM1RCxpREFBcUQ7QUFHckQsTUFBcUIsS0FBTSxTQUFRLHFDQUFxQjtJQWNwRCx5Q0FBeUM7SUFDekMsa0NBQWtDO0lBQ2xDLEtBQUs7UUFDRCxrRkFBa0Y7UUFDdEYsd0JBQXdCO1FBQ3BCLDhEQUE4RDtRQUU5RCxJQUFJLENBQUMsVUFBVSxDQUFDLFNBQVMsQ0FBQyxJQUFJLENBQUMsQ0FBQztRQUVoQyxJQUFJLENBQUMsSUFBSSxDQUFDLE9BQU8sQ0FBQyxXQUFXLENBQUMsR0FBRyxFQUFFO1lBQy9CLElBQUksQ0FBQyxPQUFPLENBQUMsU0FBUyxDQUFDLElBQUksQ0FBQyxDQUFDO1lBQzdCLDJDQUFhLENBQUMsUUFBUSxDQUFDLFdBQVcsQ0FBQyxZQUFZLENBQUMsU0FBUyxDQUFDLFVBQVUsRUFBRSxDQUFDO1lBQ3ZFLDJDQUFhLENBQUMsUUFBUSxDQUFDLFdBQVcsQ0FBQyxZQUFZLENBQUMsU0FBUyxDQUFDLFFBQVEsQ0FBQyxJQUFJLENBQUMsT0FBTyxDQUFDLFNBQVMsQ0FBQyxRQUFRLEVBQUUsSUFBSSxDQUFDLE9BQU8sQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLENBQUM7WUFDckksSUFBSSxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7UUFDckMsQ0FBQyxDQUFDLENBQUE7UUFDRixJQUFJLENBQUMsT0FBTyxDQUFDLFNBQVMsQ0FBQyxLQUFLLENBQUMsQ0FBQztRQUM5QixJQUFJLENBQUMsU0FBUyxDQUFDLE9BQU8sQ0FBQyxXQUFXLENBQUMsR0FBRyxFQUFFO1lBQ3BDLElBQUksQ0FBQyxZQUFZLENBQUMsU0FBUyxDQUFDLElBQUksQ0FBQyxDQUFDO1lBQ2xDLDJDQUFhLENBQUMsUUFBUSxDQUFDLFdBQVcsQ0FBQyxZQUFZLENBQUMsU0FBUyxDQUFDLFVBQVUsRUFBRSxDQUFDO1lBQ3ZFLDJDQUFhLENBQUMsUUFBUSxDQUFDLFdBQVcsQ0FBQyxZQUFZLENBQUMsU0FBUyxDQUFDLFFBQVEsQ0FBQyxJQUFJLENBQUMsWUFBWSxDQUFDLFNBQVMsQ0FBQyxRQUFRLEVBQUUsSUFBSSxDQUFDLFlBQVksQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLENBQUM7WUFDL0ksSUFBSSxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7UUFDckMsQ0FBQyxDQUFDLENBQUE7UUFDRixJQUFJLENBQUMsWUFBWSxDQUFDLFNBQVMsQ0FBQyxLQUFLLENBQUMsQ0FBQztRQUVuQyxJQUFJLENBQUMsU0FBUyxDQUFDLFFBQVEsQ0FBQyxDQUFDLENBQUMsQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFDLEtBQUssQ0FBQyxDQUFDO1FBQ3ZELG9DQUFvQztJQUV4QyxDQUFDO0lBRUQsbUJBQW1CO0lBQ25CLDBDQUEwQztJQUMxQyx5Q0FBeUM7SUFDekMsV0FBVztJQUNYLHVDQUF1QztJQUN2QyxJQUFJO0lBRUosY0FBYyxDQUFDLElBQWU7UUFDMUIsSUFBRyxJQUFJLENBQUMsVUFBVSxDQUFDLEdBQUcsSUFBSSxRQUFRLEVBQUM7WUFDL0IsSUFBSSxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7WUFDakMsSUFBSSxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLENBQUM7U0FDbkM7SUFDTCxDQUFDO0NBQ0o7QUF4REQsd0JBd0RDIn0=\",\"assetPath\":\"Assets/Script/Enter.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"loadingimg\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"enterpopup\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"toPC\",\"type\":\"UnityEngine.UI.Button\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"toGaraoke\",\"type\":\"UnityEngine.UI.Button\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"toPCobj\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"toGaraokeobj\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]}],\"name\":\"Enter\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: fede4d5eb8b263420bf31c13c6c0b812
+  onlyWriteTrigger: 0

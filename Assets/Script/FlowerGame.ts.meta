@@ -1,0 +1,61 @@
+fileFormatVersion: 2
+guid: 7d5f84b93f3dff744ab840de8b91357c
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    UnityEngine_UI_1 = require(\"UnityEngine.UI\");\r\nconst ZEPETO_Character_Controller_1
+    = require(\"ZEPETO.Character.Controller\");\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass
+    FlowerGame extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start() {\r\n       
+    this.cnt = 0;\r\n        this.flowerObjs = new Array();\r\n        this.clearCan.transform.GetChild(0).GetComponentsInChildren($typeof(UnityEngine_UI_1.Button)).forEach((btn)
+    => {\r\n            btn.onClick.AddListener(() => {\r\n                this.clearCan.transform.GetChild(0).gameObject.SetActive(false);\r\n               
+    this.clearCan.transform.GetChild(1).gameObject.SetActive(true);\r\n           
+    });\r\n        });\r\n        this.clearCan.transform.GetChild(1).GetComponentInChildren($typeof(UnityEngine_UI_1.Button)).onClick.AddListener(()
+    => {\r\n            this.clearCan.transform.GetChild(1).gameObject.SetActive(false);\r\n           
+    this.clearCan.transform.GetChild(2).gameObject.SetActive(true);\r\n        });\r\n       
+    this.clearCan.transform.GetChild(2).GetComponentInChildren($typeof(UnityEngine_UI_1.Button)).onClick.AddListener(()
+    => {\r\n            this.clearCan.transform.GetChild(2).gameObject.SetActive(false);\r\n       
+    });\r\n        this.clearCan.transform.GetChild(1).gameObject.SetActive(false);\r\n       
+    this.clearCan.transform.GetChild(2).gameObject.SetActive(false);\r\n        this.clearCan.SetActive(false);\r\n       
+    this.Result.transform.GetChild(0).gameObject.SetActive(false);\r\n        this.Result.transform.GetChild(1).gameObject.SetActive(false);\r\n       
+    this.flowers.SetActive(false);\r\n    }\r\n    *Checking() {\r\n        // console.log(\"this.cnt
+    \" + this.cnt + \" this.clearNum \" + this.clearNum);\r\n        while (this.cnt
+    < this.clearNum) {\r\n            yield null;\r\n            // console.log(\"this.cnt
+    \" + this.cnt + \" this.clearNum \" + this.clearNum);\r\n        }\r\n       
+    // clear Game\r\n        this.StartCoroutine(this.ResultPopup(1));\r\n    }\r\n   
+    *ResultPopup(rstNum) {\r\n        this.StopCoroutine(this.Checking());\r\n       
+    this.Result.transform.GetChild(rstNum).gameObject.SetActive(true);\r\n       
+    yield new UnityEngine_1.WaitForSeconds(2);\r\n        this.DestroyFlowers();\r\n       
+    this.Result.transform.GetChild(rstNum).gameObject.SetActive(false);\r\n       
+    switch (rstNum) {\r\n            case 0:\r\n                break;\r\n           
+    case 1:\r\n                this.clearCan.SetActive(true);\r\n               
+    this.transform.GetChild(0).gameObject.SetActive(false);\r\n                break;\r\n       
+    }\r\n        this.StopCoroutine(this.ResultPopup(rstNum));\r\n    }\r\n    StartGame()
+    {\r\n        this.flowers.SetActive(true);\r\n        this.StartCoroutine(this.Checking());\r\n   
+    }\r\n    ResetGame(isFail = true) {\r\n        this.cnt = 0;\r\n        for (let
+    i = 0; i < this.flowers.transform.childCount; i++) {\r\n            this.flowers.transform.GetChild(i).gameObject.SetActive(true);\r\n           
+    this.flowers.transform.GetChild(i).GetChild(0).gameObject.SetActive(false);\r\n       
+    }\r\n        this.flowers.SetActive(false);\r\n        if (isFail) {\r\n           
+    this.StartCoroutine(this.ResultPopup(0));\r\n        }\r\n        else {\r\n           
+    this.DestroyFlowers();\r\n        }\r\n    }\r\n    DestroyFlowers() {\r\n       
+    this.flowerObjs.forEach((flObj) => {\r\n            UnityEngine_1.GameObject.Destroy(flObj);\r\n       
+    });\r\n        this.flowerObjs = new Array();\r\n        ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.ZepetoAnimator.SetBool(\"isHold\",
+    false);\r\n    }\r\n}\r\nexports.default = FlowerGame;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRmxvd2VyR2FtZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkZsb3dlckdhbWUudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSw2Q0FBMEU7QUFDMUUsbURBQXdDO0FBQ3hDLDZFQUE0RDtBQUM1RCxpREFBcUQ7QUFFckQsTUFBcUIsVUFBVyxTQUFRLHFDQUFxQjtJQVl6RCxLQUFLO1FBQ0QsSUFBSSxDQUFDLEdBQUcsR0FBRyxDQUFDLENBQUM7UUFDYixJQUFJLENBQUMsVUFBVSxHQUFHLElBQUksS0FBSyxFQUFFLENBQUM7UUFDOUIsSUFBSSxDQUFDLFFBQVEsQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxDQUFDLHVCQUF1QixTQUFDLHVCQUFNLEdBQUksT0FBTyxDQUFDLENBQUMsR0FBRyxFQUFDLEVBQUU7WUFDakYsR0FBRyxDQUFDLE9BQU8sQ0FBQyxXQUFXLENBQUMsR0FBRSxFQUFFO2dCQUN4QixJQUFJLENBQUMsUUFBUSxDQUFDLFNBQVMsQ0FBQyxRQUFRLENBQUMsQ0FBQyxDQUFDLENBQUMsVUFBVSxDQUFDLFNBQVMsQ0FBQyxLQUFLLENBQUMsQ0FBQztnQkFDaEUsSUFBSSxDQUFDLFFBQVEsQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLENBQUM7WUFDbkUsQ0FBQyxDQUFDLENBQUM7UUFDUCxDQUFDLENBQUMsQ0FBQztRQUNILElBQUksQ0FBQyxRQUFRLENBQUMsU0FBUyxDQUFDLFFBQVEsQ0FBQyxDQUFDLENBQUMsQ0FBQyxzQkFBc0IsU0FBQyx1QkFBTSxHQUFJLE9BQU8sQ0FBQyxXQUFXLENBQUMsR0FBRSxFQUFFO1lBQ3pGLElBQUksQ0FBQyxRQUFRLENBQUMsU0FBUyxDQUFDLFFBQVEsQ0FBQyxDQUFDLENBQUMsQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFDLEtBQUssQ0FBQyxDQUFDO1lBQ2hFLElBQUksQ0FBQyxRQUFRLENBQUMsU0FBUyxDQUFDLFFBQVEsQ0FBQyxDQUFDLENBQUMsQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFDLElBQUksQ0FBQyxDQUFDO1FBQ25FLENBQUMsQ0FBQyxDQUFDO1FBQ0gsSUFBSSxDQUFDLFFBQVEsQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxDQUFDLHNCQUFzQixTQUFDLHVCQUFNLEdBQUksT0FBTyxDQUFDLFdBQVcsQ0FBQyxHQUFFLEVBQUU7WUFDekYsSUFBSSxDQUFDLFFBQVEsQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7UUFDcEUsQ0FBQyxDQUFDLENBQUM7UUFDSCxJQUFJLENBQUMsUUFBUSxDQUFDLFNBQVMsQ0FBQyxRQUFRLENBQUMsQ0FBQyxDQUFDLENBQUMsVUFBVSxDQUFDLFNBQVMsQ0FBQyxLQUFLLENBQUMsQ0FBQztRQUNoRSxJQUFJLENBQUMsUUFBUSxDQUFDLFNBQVMsQ0FBQyxRQUFRLENBQUMsQ0FBQyxDQUFDLENBQUMsVUFBVSxDQUFDLFNBQVMsQ0FBQyxLQUFLLENBQUMsQ0FBQztRQUNoRSxJQUFJLENBQUMsUUFBUSxDQUFDLFNBQVMsQ0FBQyxLQUFLLENBQUMsQ0FBQztRQUUvQixJQUFJLENBQUMsTUFBTSxDQUFDLFNBQVMsQ0FBQyxRQUFRLENBQUMsQ0FBQyxDQUFDLENBQUMsVUFBVSxDQUFDLFNBQVMsQ0FBQyxLQUFLLENBQUMsQ0FBQztRQUM5RCxJQUFJLENBQUMsTUFBTSxDQUFDLFNBQVMsQ0FBQyxRQUFRLENBQUMsQ0FBQyxDQUFDLENBQUMsVUFBVSxDQUFDLFNBQVMsQ0FBQyxLQUFLLENBQUMsQ0FBQztRQUU5RCxJQUFJLENBQUMsT0FBTyxDQUFDLFNBQVMsQ0FBQyxLQUFLLENBQUMsQ0FBQztJQUNsQyxDQUFDO0lBRU8sQ0FBQyxRQUFRO1FBQ2IsMkVBQTJFO1FBQzNFLE9BQU0sSUFBSSxDQUFDLEdBQUcsR0FBRyxJQUFJLENBQUMsUUFBUSxFQUFDO1lBQzNCLE1BQU0sSUFBSSxDQUFDO1lBQ1gsMkVBQTJFO1NBQzlFO1FBQ0QsYUFBYTtRQUNiLElBQUksQ0FBQyxjQUFjLENBQUMsSUFBSSxDQUFDLFdBQVcsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDO0lBQzdDLENBQUM7SUFFTyxDQUFDLFdBQVcsQ0FBQyxNQUFlO1FBQ2hDLElBQUksQ0FBQyxhQUFhLENBQUMsSUFBSSxDQUFDLFFBQVEsRUFBRSxDQUFDLENBQUM7UUFDcEMsSUFBSSxDQUFDLE1BQU0sQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLE1BQU0sQ0FBQyxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLENBQUM7UUFDbEUsTUFBTSxJQUFJLDRCQUFjLENBQUMsQ0FBQyxDQUFDLENBQUM7UUFDNUIsSUFBSSxDQUFDLGNBQWMsRUFBRSxDQUFDO1FBQ3RCLElBQUksQ0FBQyxNQUFNLENBQUMsU0FBUyxDQUFDLFFBQVEsQ0FBQyxNQUFNLENBQUMsQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFDLEtBQUssQ0FBQyxDQUFDO1FBQ25FLFFBQU8sTUFBTSxFQUFDO1lBQ1YsS0FBSyxDQUFDO2dCQUNGLE1BQU07WUFDVixLQUFLLENBQUM7Z0JBQ0YsSUFBSSxDQUFDLFFBQVEsQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLENBQUM7Z0JBQzlCLElBQUksQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7Z0JBQ3ZELE1BQU07U0FDYjtRQUNELElBQUksQ0FBQyxhQUFhLENBQUMsSUFBSSxDQUFDLFdBQVcsQ0FBQyxNQUFNLENBQUMsQ0FBQyxDQUFDO0lBQ2pELENBQUM7SUFFTSxTQUFTO1FBQ1osSUFBSSxDQUFDLE9BQU8sQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLENBQUM7UUFDN0IsSUFBSSxDQUFDLGNBQWMsQ0FBQyxJQUFJLENBQUMsUUFBUSxFQUFFLENBQUMsQ0FBQztJQUN6QyxDQUFDO0lBRU0sU0FBUyxDQUFDLFNBQVksSUFBSTtRQUM3QixJQUFJLENBQUMsR0FBRyxHQUFHLENBQUMsQ0FBQztRQUNiLEtBQUksSUFBSSxDQUFDLEdBQUcsQ0FBQyxFQUFFLENBQUMsR0FBRyxJQUFJLENBQUMsT0FBTyxDQUFDLFNBQVMsQ0FBQyxVQUFVLEVBQUUsQ0FBQyxFQUFFLEVBQUM7WUFDdEQsSUFBSSxDQUFDLE9BQU8sQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLENBQUM7WUFDOUQsSUFBSSxDQUFDLE9BQU8sQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxDQUFDLFFBQVEsQ0FBQyxDQUFDLENBQUMsQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFDLEtBQUssQ0FBQyxDQUFDO1NBQzlFO1FBQ0QsSUFBSSxDQUFDLE9BQU8sQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7UUFDOUIsSUFBSSxNQUFNLEVBQUM7WUFDUCxJQUFJLENBQUMsY0FBYyxDQUFDLElBQUksQ0FBQyxXQUFXLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQztTQUM1QzthQUNJO1lBQ0QsSUFBSSxDQUFDLGNBQWMsRUFBRSxDQUFDO1NBQ3pCO0lBQ0wsQ0FBQztJQUVNLGNBQWM7UUFDakIsSUFBSSxDQUFDLFVBQVUsQ0FBQyxPQUFPLENBQUMsQ0FBQyxLQUFLLEVBQUMsRUFBRTtZQUM3Qix3QkFBVSxDQUFDLE9BQU8sQ0FBQyxLQUFLLENBQUMsQ0FBQztRQUM5QixDQUFDLENBQUMsQ0FBQztRQUNILElBQUksQ0FBQyxVQUFVLEdBQUcsSUFBSSxLQUFLLEVBQUUsQ0FBQztRQUM5QiwyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxXQUFXLENBQUMsWUFBWSxDQUFDLFNBQVMsQ0FBQyxjQUFjLENBQUMsT0FBTyxDQUFDLFFBQVEsRUFBRSxLQUFLLENBQUMsQ0FBQztJQUN0RyxDQUFDO0NBQ0o7QUE1RkQsNkJBNEZDIn0=","assetPath":"Assets/Script/FlowerGame.ts","manifest":{"properties":[{"assembly":"mscorlib","name":"clearNum","type":"System.Single","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"flowers","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"clearCan","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"Result","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"FlowerGame","description":""},"isCompiled":true}'
+  typescriptHash: d8eb24eca23eddb7b7ad9eb755dfd3d9
+  onlyWriteTrigger: 0

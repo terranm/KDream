@@ -1,0 +1,38 @@
+fileFormatVersion: 2
+guid: 6b6471caa881e754a9a54414d88b53b5
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst UnityEngine_1 = require(\\\"UnityEngine\\\");\\r\\nconst
+    ZEPETO_Character_Controller_1 = require(\\\"ZEPETO.Character.Controller\\\");\\r\\nconst
+    ZEPETO_Script_1 = require(\\\"ZEPETO.Script\\\");\\r\\nclass Yeonmot extends
+    ZEPETO_Script_1.ZepetoScriptBehaviour {\\r\\n    // public popUp : GameObject;\\r\\n   
+    // public no:Button;\\r\\n    // public closeall : GameObject;\\r\\n    Start()
+    {\\r\\n        this.cam = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.ZepetoCamera.camera;
+    // \uC0DD\uC131\uB41C \uD50C\uB808\uC774\uC5B4\uC758 \uCE74\uBA54\uB77C \uAC00\uC838\uC624\uAE30\\r\\n       
+    console.log(this.cam);\\r\\n        console.log('camera setting');\\r\\n       
+    this.GetComponent($typeof(UnityEngine_1.Canvas)).worldCamera = this.cam;\\r\\n       
+    // this.but.onClick.AddListener(() => {\\r\\n        //     console.log(`\uB204\uB974\uB2E4
+    \uBC84\uD2BC`);\\r\\n        //     this.popUp.SetActive(true);\\r\\n       
+    // })\\r\\n        // this.no.onClick.AddListener(() => {\\r\\n        //    
+    this.popUp.SetActive(false);\\r\\n        //     this.but.gameObject.SetActive(false);\\r\\n       
+    //     this.closeall.SetActive(false);\\r\\n        // })\\r\\n    }\\r\\n}\\r\\nexports.default
+    = Yeonmot;\\r\\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiWWVvbm1vdC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlllb25tb3QudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSw2Q0FBOEU7QUFFOUUsNkVBQTREO0FBQzVELGlEQUFxRDtBQUVyRCxNQUFxQixPQUFRLFNBQVEscUNBQXFCO0lBSXRELDZCQUE2QjtJQUM3QixvQkFBb0I7SUFDcEIsZ0NBQWdDO0lBRWhDLEtBQUs7UUFDRCxJQUFJLENBQUMsR0FBRyxHQUFHLDJDQUFhLENBQUMsUUFBUSxDQUFDLFlBQVksQ0FBQyxNQUFNLENBQUMsQ0FBSSxxQkFBcUI7UUFDL0UsT0FBTyxDQUFDLEdBQUcsQ0FBQyxJQUFJLENBQUMsR0FBRyxDQUFDLENBQUM7UUFDdEIsT0FBTyxDQUFDLEdBQUcsQ0FBQyxnQkFBZ0IsQ0FBQyxDQUFDO1FBQzlCLElBQUksQ0FBQyxZQUFZLFNBQUMsb0JBQU0sR0FBSSxXQUFXLEdBQUcsSUFBSSxDQUFDLEdBQUcsQ0FBQztRQUd2RCx1Q0FBdUM7UUFDdkMsNkJBQTZCO1FBQzdCLGtDQUFrQztRQUNsQyxLQUFLO1FBRUwsc0NBQXNDO1FBQ3RDLG1DQUFtQztRQUNuQyw0Q0FBNEM7UUFDNUMsc0NBQXNDO1FBQ3RDLEtBQUs7SUFFTCxDQUFDO0NBQ0o7QUEzQkQsMEJBMkJDIn0=\",\"assetPath\":\"Assets/Script/Yeonmot.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"cam\",\"type\":\"UnityEngine.Camera\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]}],\"name\":\"Yeonmot\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: 8dd44b7e41eb4595119f942dc4a1170b
+  onlyWriteTrigger: 0

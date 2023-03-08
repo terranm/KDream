@@ -1,0 +1,83 @@
+fileFormatVersion: 2
+guid: 71f9fc7228de83942a70f62d66543601
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst UnityEngine_1 = require(\\\"UnityEngine\\\");\\r\\nconst
+    UnityEngine_UI_1 = require(\\\"UnityEngine.UI\\\");\\r\\nconst ZEPETO_Character_Controller_1
+    = require(\\\"ZEPETO.Character.Controller\\\");\\r\\nconst ZEPETO_Script_1 =
+    require(\\\"ZEPETO.Script\\\");\\r\\nclass Banditbul extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\\r\\n    Start() {\\r\\n        this.cam = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.ZepetoCamera.camera;
+    // \uC0DD\uC131\uB41C \uD50C\uB808\uC774\uC5B4\uC758 \uCE74\uBA54\uB77C \uAC00\uC838\uC624\uAE30\\r\\n       
+    //\uC2DC\uC791\uC2DC \uCD08\uAE30\uD654\\r\\n        this.lantern = this.transform.GetComponent($typeof(UnityEngine_1.Renderer));\\r\\n       
+    this.lantern.material.SetFloat(\\\"_BrightAmount\\\", 1);\\r\\n        // this.questNum
+    = 2;\\r\\n        this.bandinum = -1;\\r\\n        this.lanternLight.intensity
+    = 2;\\r\\n        this.lightbtn.transform.parent.GetComponent($typeof(UnityEngine_1.Canvas)).worldCamera
+    = this.cam;\\r\\n        this.transform.GetChild(0).GetChild(1).gameObject.SetActive(false);
+    // \uD30C\uD2F0\uD074 \uB044\uAE30\\r\\n        // this.lightbtn.gameObject.SetActive(false);\\r\\n       
+    this.lampybtns = new Array();\\r\\n        this.lampybtns = this.LampybtnList.GetComponentsInChildren($typeof(UnityEngine_UI_1.Button));\\r\\n       
+    // let num = 0;\\r\\n        // console.log(\\\"lampyBtn Set start \\\" + num);\\r\\n       
+    this.lampybtns.forEach((btn) => {\\r\\n            // ++num;\\r\\n           
+    // console.log(\\\"lampyBtn Set \\\" + num);\\r\\n            btn.transform.parent.GetComponent($typeof(UnityEngine_1.Canvas)).worldCamera
+    = this.cam;\\r\\n            btn.onClick.AddListener(() => {\\r\\n               
+    console.log(\\\"lampyBtn Click\\\");\\r\\n                this.lightbtn.gameObject.SetActive(true);\\r\\n               
+    this.lampybtns.forEach((btn) => {\\r\\n                    btn.gameObject.SetActive(false);\\r\\n               
+    });\\r\\n                let hand = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.transform.GetChild(0).GetChild(1).GetChild(2).GetChild(0).GetChild(1).GetChild(3).GetChild(1).GetChild(1).GetChild(0).GetChild(1).GetChild(0);\\r\\n               
+    this.getmother = UnityEngine_1.GameObject.Instantiate(this.lampy, hand.position,
+    UnityEngine_1.Quaternion.identity);\\r\\n                this.getmother.transform.SetParent(hand);\\r\\n               
+    this.getmother.transform.localPosition = new UnityEngine_1.Vector3(0.05, 0.02,
+    0);\\r\\n                this.getmother.transform.localRotation = UnityEngine_1.Quaternion.identity;\\r\\n               
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.ZepetoAnimator.SetBool(\\\"isHold\\\",
+    true);\\r\\n            });\\r\\n            btn.gameObject.SetActive(false);\\r\\n       
+    });\\r\\n        // console.log(\\\"lampyBtn Set end \\\" + num);\\r\\n       
+    let brightAmount = 1.5 / (this.questNum);\\r\\n        let intensity = 6 / (this.questNum);\\r\\n       
+    this.lightbtn.onClick.AddListener(() => {\\r\\n            this.bandinum += 1;\\r\\n           
+    UnityEngine_1.GameObject.Destroy(this.getmother);\\r\\n            this.lantern.material.SetFloat(\\\"_BrightAmount\\\",
+    1 + (this.bandinum * brightAmount));\\r\\n            this.lanternLight.GetComponentInChildren($typeof(UnityEngine_1.Light)).intensity
+    =\\r\\n                2 + (this.bandinum * intensity);\\r\\n            console.log(`\uBC18\uB527\uBD88\uC774
+    ${this.bandinum}\uB9C8\uB9AC \uC218\uC9D1`);\\r\\n            this.lightbtn.gameObject.SetActive(false);\\r\\n           
+    if (this.bandinum >= this.questNum) {\\r\\n                this.popUp.SetActive(true);\\r\\n               
+    this.LampybtnList.SetActive(false);\\r\\n                this.transform.GetChild(0).GetChild(1).gameObject.SetActive(true);\\r\\n           
+    }\\r\\n            else {\\r\\n                this.lampybtns.forEach((btn) =>
+    {\\r\\n                    btn.gameObject.SetActive(true);\\r\\n               
+    });\\r\\n            }\\r\\n            ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.ZepetoAnimator.SetBool(\\\"isHold\\\",
+    false);\\r\\n        });\\r\\n        let psyTest = this.popUp.transform.GetChild(0);\\r\\n       
+    for (let i = 0; i < psyTest.childCount - 1; i++) {\\r\\n            psyTest.GetChild(i).GetComponentsInChildren($typeof(UnityEngine_UI_1.Button)).forEach((btn)
+    => {\\r\\n                btn.onClick.AddListener(() => {\\r\\n                   
+    psyTest.GetChild(i).gameObject.SetActive(false);\\r\\n                    psyTest.GetChild(i
+    + 1).gameObject.SetActive(true);\\r\\n                });\\r\\n            });\\r\\n           
+    psyTest.GetChild(i).gameObject.SetActive(false);\\r\\n        }\\r\\n       
+    psyTest.GetChild(psyTest.childCount - 1).GetComponentsInChildren($typeof(UnityEngine_UI_1.Button)).forEach((btn)
+    => {\\r\\n            btn.onClick.AddListener(() => {\\r\\n                psyTest.GetChild(5).gameObject.SetActive(false);\\r\\n               
+    this.popUp.transform.GetChild(1).gameObject.SetActive(true);\\r\\n           
+    });\\r\\n        });\\r\\n        this.popUp.transform.GetChild(1).GetComponentInChildren($typeof(UnityEngine_UI_1.Button)).onClick.AddListener(()
+    => {\\r\\n            this.popUp.transform.GetChild(1).gameObject.SetActive(false);\\r\\n           
+    this.popUp.transform.GetChild(2).gameObject.SetActive(true);\\r\\n        });\\r\\n       
+    psyTest.GetChild(0).gameObject.SetActive(true);\\r\\n        psyTest.GetChild(5).gameObject.SetActive(false);\\r\\n       
+    this.popUp.transform.GetChild(1).gameObject.SetActive(false);\\r\\n        this.popUp.transform.GetChild(2).gameObject.SetActive(false);\\r\\n       
+    this.closebtn.onClick.AddListener(() => {\\r\\n            this.popUp.SetActive(false);\\r\\n       
+    });\\r\\n        this.showZone.SetActive(true);\\r\\n    }\\r\\n    ResetGame()
+    {\\r\\n        if (this.getmother != null) {\\r\\n            UnityEngine_1.GameObject.Destroy(this.getmother);\\r\\n           
+    this.lightbtn.gameObject.SetActive(false);\\r\\n            this.lampybtns.forEach((btn)
+    => {\\r\\n                btn.gameObject.SetActive(true);\\r\\n            });\\r\\n           
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.ZepetoAnimator.SetBool(\\\"isHold\\\",
+    false);\\r\\n        }\\r\\n    }\\r\\n}\\r\\nexports.default = Banditbul;\\r\\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQmFuZGl0YnVsLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiQmFuZGl0YnVsLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQTJIO0FBQzNILG1EQUF3QztBQUN4Qyw2RUFBNEQ7QUFDNUQsaURBQXFEO0FBRXJELE1BQXFCLFNBQVUsU0FBUSxxQ0FBcUI7SUFtQnhELEtBQUs7UUFDRCxJQUFJLENBQUMsR0FBRyxHQUFHLDJDQUFhLENBQUMsUUFBUSxDQUFDLFlBQVksQ0FBQyxNQUFNLENBQUMsQ0FBSSxxQkFBcUI7UUFFL0UsU0FBUztRQUNULElBQUksQ0FBQyxPQUFPLEdBQUcsSUFBSSxDQUFDLFNBQVMsQ0FBQyxZQUFZLFNBQUMsc0JBQVEsRUFBRyxDQUFDO1FBQ3ZELElBQUksQ0FBQyxPQUFPLENBQUMsUUFBUSxDQUFDLFFBQVEsQ0FBQyxlQUFlLEVBQUUsQ0FBQyxDQUFDLENBQUM7UUFDbkQscUJBQXFCO1FBQ3JCLElBQUksQ0FBQyxRQUFRLEdBQUcsQ0FBQyxDQUFDLENBQUM7UUFDbkIsSUFBSSxDQUFDLFlBQVksQ0FBQyxTQUFTLEdBQUcsQ0FBQyxDQUFDO1FBQ2hDLElBQUksQ0FBQyxRQUFRLENBQUMsU0FBUyxDQUFDLE1BQU0sQ0FBQyxZQUFZLFNBQUMsb0JBQU0sR0FBSSxXQUFXLEdBQUcsSUFBSSxDQUFDLEdBQUcsQ0FBQztRQUM3RSxJQUFJLENBQUMsU0FBUyxDQUFDLFFBQVEsQ0FBQyxDQUFDLENBQUMsQ0FBQyxRQUFRLENBQUMsQ0FBQyxDQUFDLENBQUMsVUFBVSxDQUFDLFNBQVMsQ0FBQyxLQUFLLENBQUMsQ0FBQyxDQUFDLFNBQVM7UUFDN0UsNkNBQTZDO1FBRTdDLElBQUksQ0FBQyxTQUFTLEdBQUcsSUFBSSxLQUFLLEVBQUUsQ0FBQztRQUM3QixJQUFJLENBQUMsU0FBUyxHQUFHLElBQUksQ0FBQyxZQUFZLENBQUMsdUJBQXVCLFNBQUMsdUJBQU0sRUFBRyxDQUFDO1FBQ3JFLGVBQWU7UUFDZiw0Q0FBNEM7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\",\"assetPath\":\"Assets/Script/Banditbul.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"LampybtnList\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"lightbtn\",\"type\":\"UnityEngine.UI.Button\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"lampy\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"lanternLight\",\"type\":\"UnityEngine.Light\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"mscorlib\",\"name\":\"questNum\",\"type\":\"System.Single\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"showZone\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"popUp\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"closebtn\",\"type\":\"UnityEngine.UI.Button\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]}],\"name\":\"Banditbul\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: 089404e54540093f55d3c71e5e2b1a75
+  onlyWriteTrigger: 0

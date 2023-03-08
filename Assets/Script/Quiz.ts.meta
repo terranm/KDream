@@ -1,0 +1,46 @@
+fileFormatVersion: 2
+guid: c27f282ff3949b24495aecff28f815f5
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    UnityEngine_UI_1 = require(\"UnityEngine.UI\");\r\nconst ZEPETO_Character_Controller_1
+    = require(\"ZEPETO.Character.Controller\");\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass
+    Quiz extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start() {\r\n       
+    // this.OXQuiz = this.canObj.transform.GetChild(0);\r\n        // this.Result
+    = this.canObj.transform.GetChild(1);\r\n        let OXbtns = this.OXQuiz.GetComponentsInChildren($typeof(UnityEngine_UI_1.Button));\r\n       
+    let num = 0;\r\n        OXbtns.forEach((btn) => {\r\n            btn.onClick.AddListener(()
+    => {\r\n                this.OXQuiz.gameObject.SetActive(false);\r\n           
+    });\r\n            if (num > 0) {\r\n                if (this.RightAnswer ==
+    num) {\r\n                    btn.onClick.AddListener(() => {\r\n                       
+    this.Result.gameObject.SetActive(true);\r\n                    });\r\n               
+    }\r\n                else {\r\n                    btn.onClick.AddListener(()
+    => {\r\n                        this.WrongAnswer();\r\n                    });\r\n               
+    }\r\n            }\r\n            num++;\r\n        });\r\n        this.Result.GetComponentInChildren($typeof(UnityEngine_UI_1.Button)).onClick.AddListener(()
+    => {\r\n            this.Result.gameObject.SetActive(false);\r\n            this.gameObject.SetActive(false);\r\n       
+    });\r\n        this.OXQuiz.gameObject.SetActive(false);\r\n        this.Result.gameObject.SetActive(false);\r\n       
+    this.canObj.SetActive(true);\r\n    }\r\n    OnTriggerEnter(coll) {\r\n       
+    if (coll.gameObject.tag == \"Player\") {\r\n            this.OXQuiz.gameObject.SetActive(true);\r\n       
+    }\r\n    }\r\n    WrongAnswer() {\r\n        for (let i = 0; i < 3; i++) {\r\n           
+    this.transform.parent.GetChild(i).gameObject.SetActive(true);\r\n        }\r\n       
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.Teleport(this.transform.parent.position,
+    this.transform.parent.rotation);\r\n    }\r\n}\r\nexports.default = Quiz;\r\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiUXVpei5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlF1aXoudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSw2Q0FBOEU7QUFDOUUsbURBQXdDO0FBQ3hDLDZFQUE0RDtBQUM1RCxpREFBcUQ7QUFFckQsTUFBcUIsSUFBSyxTQUFRLHFDQUFxQjtJQVFuRCxLQUFLO1FBQ0QsbURBQW1EO1FBQ25ELG1EQUFtRDtRQUNuRCxJQUFJLE1BQU0sR0FBRyxJQUFJLENBQUMsTUFBTSxDQUFDLHVCQUF1QixTQUFDLHVCQUFNLEVBQUcsQ0FBQztRQUMzRCxJQUFJLEdBQUcsR0FBRyxDQUFDLENBQUM7UUFDWixNQUFNLENBQUMsT0FBTyxDQUFDLENBQUMsR0FBRyxFQUFDLEVBQUU7WUFDbEIsR0FBRyxDQUFDLE9BQU8sQ0FBQyxXQUFXLENBQUMsR0FBRSxFQUFFO2dCQUN4QixJQUFJLENBQUMsTUFBTSxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7WUFDNUMsQ0FBQyxDQUFDLENBQUM7WUFDSCxJQUFJLEdBQUcsR0FBRyxDQUFDLEVBQUM7Z0JBQ1IsSUFBSSxJQUFJLENBQUMsV0FBVyxJQUFJLEdBQUcsRUFBQztvQkFDeEIsR0FBRyxDQUFDLE9BQU8sQ0FBQyxXQUFXLENBQUMsR0FBRSxFQUFFO3dCQUN4QixJQUFJLENBQUMsTUFBTSxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLENBQUM7b0JBQzNDLENBQUMsQ0FBQyxDQUFDO2lCQUNOO3FCQUNHO29CQUNBLEdBQUcsQ0FBQyxPQUFPLENBQUMsV0FBVyxDQUFDLEdBQUUsRUFBRTt3QkFDeEIsSUFBSSxDQUFDLFdBQVcsRUFBRSxDQUFDO29CQUN2QixDQUFDLENBQUMsQ0FBQztpQkFDTjthQUNKO1lBQ0QsR0FBRyxFQUFFLENBQUE7UUFDVCxDQUFDLENBQUMsQ0FBQztRQUNILElBQUksQ0FBQyxNQUFNLENBQUMsc0JBQXNCLFNBQUMsdUJBQU0sR0FBSSxPQUFPLENBQUMsV0FBVyxDQUFDLEdBQUUsRUFBRTtZQUNqRSxJQUFJLENBQUMsTUFBTSxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7WUFDeEMsSUFBSSxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7UUFDckMsQ0FBQyxDQUFDLENBQUM7UUFFSCxJQUFJLENBQUMsTUFBTSxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7UUFDeEMsSUFBSSxDQUFDLE1BQU0sQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFDLEtBQUssQ0FBQyxDQUFDO1FBQ3hDLElBQUksQ0FBQyxNQUFNLENBQUMsU0FBUyxDQUFDLElBQUksQ0FBQyxDQUFDO0lBQ2hDLENBQUM7SUFFRCxjQUFjLENBQUMsSUFBZTtRQUMxQixJQUFHLElBQUksQ0FBQyxVQUFVLENBQUMsR0FBRyxJQUFJLFFBQVEsRUFBQztZQUUvQixJQUFJLENBQUMsTUFBTSxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLENBQUM7U0FDMUM7SUFDTCxDQUFDO0lBRU8sV0FBVztRQUNmLEtBQUksSUFBSSxDQUFDLEdBQUcsQ0FBQyxFQUFFLENBQUMsR0FBRyxDQUFDLEVBQUUsQ0FBQyxFQUFFLEVBQUM7WUFDdEIsSUFBSSxDQUFDLFNBQVMsQ0FBQyxNQUFNLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLENBQUM7U0FDaEU7UUFDRCwyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxXQUFXLENBQUMsWUFBWSxDQUFDLFNBQVMsQ0FBQyxRQUFRLENBQUMsSUFBSSxDQUFDLFNBQVMsQ0FBQyxNQUFNLENBQUMsUUFBUSxFQUFFLElBQUksQ0FBQyxTQUFTLENBQUMsTUFBTSxDQUFDLFFBQVEsQ0FBQyxDQUFDO0lBQ3ZJLENBQUM7Q0FDSjtBQXRERCx1QkFzREMifQ==","assetPath":"Assets/Script/Quiz.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"canObj","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"OXQuiz","type":"UnityEngine.Transform","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"Result","type":"UnityEngine.Transform","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"RightAnswer","type":"System.Single","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"Quiz","description":""},"isCompiled":true}'
+  typescriptHash: d8e5f8e2a893b88e173df5989b268e87
+  onlyWriteTrigger: 0

@@ -1,0 +1,39 @@
+fileFormatVersion: 2
+guid: 49342f145f8cabc42bba2c4a8a2b1380
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst UnityEngine_1 = require(\\\"UnityEngine\\\");\\r\\nconst
+    ZEPETO_Character_Controller_1 = require(\\\"ZEPETO.Character.Controller\\\");\\r\\nconst
+    ZEPETO_Script_1 = require(\\\"ZEPETO.Script\\\");\\r\\nclass Teleport extends
+    ZEPETO_Script_1.ZepetoScriptBehaviour {\\r\\n    //hitBox\uC758 collider\uC5D0
+    \uB2FF\uC73C\uBA74 \uC9C0\uC815\uB41C \uC704\uCE58\uB85C \uD154\uB808\uD3EC\uD2B8\uD558\uB294
+    \uB85C\uC9C1\\r\\n    OnTriggerEnter(hitBox) {\\r\\n        if (hitBox.gameObject.tag
+    == \\\"Player\\\") {\\r\\n            //\uD50C\uB808\uC774\uC5B4\uAC00 \uBB34\uD55C
+    \uC774\uB3D9\uD558\uB294 \uBC84\uADF8 \uC218\uC815 \uB85C\uC9C1.\\r\\n           
+    //\uD50C\uB808\uC774\uC5B4\uC758 X,Y,Z \uAC12\uC774 \uD788\uD2B8 \uC624\uBE0C\uC81D\uD2B8\uC758
+    X,Y,Z\uAC12\uACFC \uC644\uBCBD\uD558\uAC8C \uC77C\uCE58\uD558\uBA74(\uD154\uB808\uD3EC\uD2B8
+    \uC9C1\uD6C4\uB77C\uBA74) OnTriggerEnter\uAC00 \uBC18\uC751\uD558\uC9C0 \uC54A\uB3C4\uB85D
+    \uC218\uC815\\r\\n            if (UnityEngine_1.Vector3.op_Inequality(this.hitBox.transform.position,
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.transform.position))
+    {\\r\\n                ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.StopMoving();\\r\\n               
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.Teleport(this.targetObjs.transform.position,
+    this.targetObjs.transform.rotation);\\r\\n            }\\r\\n        }\\r\\n   
+    }\\r\\n}\\r\\nexports.default = Teleport;\\r\\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVGVsZXBvcnQuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJUZWxlcG9ydC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDZDQUFnRjtBQUVoRiw2RUFBNEQ7QUFDNUQsaURBQW9EO0FBRXBELE1BQXFCLFFBQVMsU0FBUSxxQ0FBcUI7SUFNdkQseUNBQXlDO0lBQ3pDLGNBQWMsQ0FBQyxNQUFnQjtRQUMzQixJQUFHLE1BQU0sQ0FBQyxVQUFVLENBQUMsR0FBRyxJQUFJLFFBQVEsRUFBQztZQUNqQyx5QkFBeUI7WUFDekIsa0ZBQWtGO1lBQ2xGLElBaEI4QixxQkFBTyxDQXNCcXZxQixhQUFjLENBTnJ5cUIsSUFBSSxDQUFDLE1BQU0sQ0FBQyxTQUFTLENBQUMsUUFBUSxFQUFJLDJDQUFhLENBQUMsUUFBUSxDQUFDLFdBQVcsQ0FBQyxZQUFZLENBQUMsU0FBUyxDQUFDLFNBQVMsQ0FBQyxRQUFRLEdBQUM7Z0JBQzlHLDJDQUFhLENBQUMsUUFBUSxDQUFDLFdBQVcsQ0FBQyxZQUFZLENBQUMsU0FBUyxDQUFDLFVBQVUsRUFBRSxDQUFDO2dCQUN2RSwyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxXQUFXLENBQUMsWUFBWSxDQUFDLFNBQVMsQ0FBQyxRQUFRLENBQUMsSUFBSSxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsUUFBUSxFQUFDLElBQUksQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFDLFFBQVEsQ0FBQyxDQUFDO2FBQ2pKO1NBQ0E7SUFDTCxDQUFDO0NBQ0o7QUFqQkQsMkJBaUJDIn0=\",\"assetPath\":\"Assets/Script/Teleport.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"hitBox\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"targetObjs\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]}],\"name\":\"Teleport\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: ce9408182ec2a9b793debca8bf573b03

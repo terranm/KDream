@@ -1,0 +1,43 @@
+fileFormatVersion: 2
+guid: ec13496984dbfee4daa74d88b5f6d024
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst UnityEngine_1 = require(\\\"UnityEngine\\\");\\r\\nconst
+    ZEPETO_Character_Controller_1 = require(\\\"ZEPETO.Character.Controller\\\");\\r\\nconst
+    ZEPETO_Script_1 = require(\\\"ZEPETO.Script\\\");\\r\\nconst ClientStarter_1
+    = require(\\\"../ZepetoScripts/Multiplay/ClientStarter\\\");\\r\\nclass CharacterCulling
+    extends ZEPETO_Script_1.ZepetoScriptBehaviour {\\r\\n    Start() {\\r\\n       
+    this.Stater = (UnityEngine_1.GameObject.Find(\\\"ClientStarter\\\")).GetComponent($typeof(ClientStarter_1.default));\\r\\n       
+    this.obj = UnityEngine_1.GameObject.Find(\\\"ZepetoPlayers\\\");\\r\\n       
+    this.StartCoroutine(this.Check());\\r\\n    }\\r\\n    *Check() {\\r\\n       
+    while (true) {\\r\\n            yield null;\\r\\n            if (this.Stater.isGameStart
+    != true) {\\r\\n                yield new UnityEngine_1.WaitForSeconds(0.1);\\r\\n               
+    continue;\\r\\n            }\\r\\n            if (this.obj.transform.GetChild(2).GetChild(0).GetChild(0).transform.localPosition.z
+    > -0.5) {\\r\\n                // console.log(`\uC88C\uD45C\\\\n`+ZepetoPlayers.instance.LocalPlayer.zepetoCamera.cameraParent.GetChild(0).transform.localPosition.z);\\r\\n               
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.transform.GetChild(0).GetChild(0).gameObject.SetActive(false);\\r\\n               
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.transform.GetChild(0).GetChild(1).gameObject.SetActive(false);\\r\\n               
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.transform.GetChild(0).GetChild(2).gameObject.SetActive(false);\\r\\n           
+    }\\r\\n            else {\\r\\n                ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.transform.GetChild(0).GetChild(0).gameObject.SetActive(true);\\r\\n               
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.transform.GetChild(0).GetChild(1).gameObject.SetActive(true);\\r\\n               
+    ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.transform.GetChild(0).GetChild(2).gameObject.SetActive(true);\\r\\n           
+    }\\r\\n        }\\r\\n    }\\r\\n}\\r\\nexports.default = CharacterCulling;\\r\\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQ2hhcmFjdGVyQ3VsbGluZy5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkNoYXJhY3RlckN1bGxpbmcudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSw2Q0FBd0Q7QUFDeEQsNkVBQTJEO0FBQzNELGlEQUFxRDtBQUNyRCw0RUFBcUU7QUFFckUsTUFBcUIsZ0JBQWlCLFNBQVEscUNBQXFCO0lBSS9ELEtBQUs7UUFDRCxJQUFJLENBQUMsTUFBTSxHQUFHLENBQUMsd0JBQVUsQ0FBQyxJQUFJLENBQUMsZUFBZSxDQUFDLENBQUMsQ0FBQyxZQUFZLFNBQUMsdUJBQWEsRUFBRyxDQUFDO1FBQy9FLElBQUksQ0FBQyxHQUFHLEdBQUcsd0JBQVUsQ0FBQyxJQUFJLENBQUMsZUFBZSxDQUFDLENBQUM7UUFDNUMsSUFBSSxDQUFDLGNBQWMsQ0FBQyxJQUFJLENBQUMsS0FBSyxFQUFFLENBQUMsQ0FBQztJQUN0QyxDQUFDO0lBRU8sQ0FBQyxLQUFLO1FBQ1YsT0FBTSxJQUFJLEVBQUM7WUFDUCxNQUFNLElBQUksQ0FBQztZQUNYLElBQUksSUFBSSxDQUFDLE1BQU0sQ0FBQyxXQUFXLElBQUksSUFBSSxFQUFFO2dCQUNqQyxNQUFNLElBQUksNEJBQWMsQ0FBQyxHQUFHLENBQUMsQ0FBQztnQkFDOUIsU0FBUzthQUNaO1lBRUQsSUFBSSxJQUFJLENBQUMsR0FBRyxDQUFDLFNBQVMsQ0FBQyxRQUFRLENBQUMsQ0FBQyxDQUFDLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxDQUFDLFFBQVEsQ0FBQyxDQUFDLENBQUMsQ0FBQyxTQUFTLENBQUMsYUFBYSxDQUFDLENBQUMsR0FBRyxDQUFDLEdBQUcsRUFBQztnQkFDeEYsMEhBQTBIO2dCQUMxSCwyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxXQUFXLENBQUMsWUFBWSxDQUFDLFNBQVMsQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxDQUFDLFFBQVEsQ0FBQyxDQUFDLENBQUMsQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFDLEtBQUssQ0FBQyxDQUFDO2dCQUN4SCwyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxXQUFXLENBQUMsWUFBWSxDQUFDLFNBQVMsQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxDQUFDLFFBQVEsQ0FBQyxDQUFDLENBQUMsQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFDLEtBQUssQ0FBQyxDQUFDO2dCQUN4SCwyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxXQUFXLENBQUMsWUFBWSxDQUFDLFNBQVMsQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxDQUFDLFFBQVEsQ0FBQyxDQUFDLENBQUMsQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFDLEtBQUssQ0FBQyxDQUFDO2FBQzNIO2lCQUFJO2dCQUNELDJDQUFhLENBQUMsUUFBUSxDQUFDLFdBQVcsQ0FBQyxZQUFZLENBQUMsU0FBUyxDQUFDLFNBQVMsQ0FBQyxRQUFRLENBQUMsQ0FBQyxDQUFDLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLENBQUM7Z0JBQ3ZILDJDQUFhLENBQUMsUUFBUSxDQUFDLFdBQVcsQ0FBQyxZQUFZLENBQUMsU0FBUyxDQUFDLFNBQVMsQ0FBQyxRQUFRLENBQUMsQ0FBQyxDQUFDLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLENBQUM7Z0JBQ3ZILDJDQUFhLENBQUMsUUFBUSxDQUFDLFdBQVcsQ0FBQyxZQUFZLENBQUMsU0FBUyxDQUFDLFNBQVMsQ0FBQyxRQUFRLENBQUMsQ0FBQyxDQUFDLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLENBQUM7YUFDMUg7U0FDSjtJQUVMLENBQUM7Q0FDSjtBQS9CRCxtQ0ErQkMifQ==\",\"assetPath\":\"Assets/Script/CharacterCulling.ts\",\"manifest\":{\"properties\":[],\"name\":\"CharacterCulling\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: 0b5c87d305d955129095c17afa267fb9
+  onlyWriteTrigger: 0

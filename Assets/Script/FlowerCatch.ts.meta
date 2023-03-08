@@ -1,0 +1,42 @@
+fileFormatVersion: 2
+guid: 88ce8fc172ad41c4e8367c2108a999c5
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst UnityEngine_1 = require(\\\"UnityEngine\\\");\\r\\nconst
+    UnityEngine_UI_1 = require(\\\"UnityEngine.UI\\\");\\r\\nconst ZEPETO_Character_Controller_1
+    = require(\\\"ZEPETO.Character.Controller\\\");\\r\\nconst ZEPETO_Script_1 =
+    require(\\\"ZEPETO.Script\\\");\\r\\nconst FlowerGame_1 = require(\\\"./FlowerGame\\\");\\r\\nclass
+    FlowerCatch extends ZEPETO_Script_1.ZepetoScriptBehaviour {\\r\\n    Start()
+    {\\r\\n        this.cam = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.ZepetoCamera.camera;\\r\\n       
+    this.canvas.GetComponent($typeof(UnityEngine_1.Canvas)).worldCamera = this.cam;\\r\\n       
+    // let checker = ;\\r\\n        let hand = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.transform.GetChild(0).GetChild(1).GetChild(2).GetChild(0).GetChild(1).GetChild(3).GetChild(1).GetChild(1).GetChild(0).GetChild(1).GetChild(0);\\r\\n       
+    this.btn.onClick.AddListener(() => {\\r\\n            // console.log(\\\"\uAF43
+    \uD68D\uB4DD \uBC84\uD2BC \uB204\uB984\\\");\\r\\n            //let num = parseInt(Random.Range(0,4).toString());\\r\\n           
+    let flObjPrefab = this.flower;\\r\\n            let flObj = UnityEngine_1.GameObject.Instantiate(flObjPrefab);\\r\\n           
+    flObj.transform.SetParent(hand);\\r\\n            flObj.transform.localPosition
+    = new UnityEngine_1.Vector3(0.05, 0.03, 0); //0.123,0.035,-0.15\\r\\n           
+    flObj.transform.localRotation = UnityEngine_1.Quaternion.Euler(new UnityEngine_1.Vector3(-90,
+    -30, 0));\\r\\n            ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.ZepetoAnimator.SetBool(\\\"isHold\\\",
+    true);\\r\\n            this.gameObject.SetActive(false);\\r\\n            this.Checker.GetComponent($typeof(FlowerGame_1.default)).cnt++;\\r\\n           
+    // console.log(\\\"checker.cnt \\\" + checker.cnt);\\r\\n            this.Checker.GetComponent($typeof(FlowerGame_1.default)).flowerObjs.push(flObj);\\r\\n           
+    // console.log(\\\"\uAF43 \uD68D\uB4DD \uBC84\uD2BC \uB204\uB984 \uC644\uB8CC\\\");\\r\\n       
+    });\\r\\n    }\\r\\n}\\r\\nexports.default = FlowerCatch;\\r\\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRmxvd2VyQ2F0Y2guanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJGbG93ZXJDYXRjaC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDZDQUFxRjtBQUNyRixtREFBd0M7QUFDeEMsNkVBQTREO0FBQzVELGlEQUFxRDtBQUNyRCw2Q0FBc0M7QUFFdEMsTUFBcUIsV0FBWSxTQUFRLHFDQUFxQjtJQVExRCxLQUFLO1FBQ0QsSUFBSSxDQUFDLEdBQUcsR0FBRywyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxZQUFZLENBQUMsTUFBTSxDQUFDO1FBQ3RELElBQUksQ0FBQyxNQUFNLENBQUMsWUFBWSxTQUFDLG9CQUFNLEdBQUksV0FBVyxHQUFHLElBQUksQ0FBQyxHQUFHLENBQUM7UUFFMUQsa0JBQWtCO1FBRWxCLElBQUksSUFBSSxHQUFHLDJDQUFhLENBQUMsUUFBUSxDQUFDLFdBQVcsQ0FBQyxZQUFZLENBQUMsU0FBUyxDQUFDLFNBQVMsQ0FBQyxRQUFRLENBQUMsQ0FBQyxDQUFDLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxDQUFDLFFBQVEsQ0FBQyxDQUFDLENBQUMsQ0FBQyxRQUFRLENBQUMsQ0FBQyxDQUFDLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxDQUFDLFFBQVEsQ0FBQyxDQUFDLENBQUMsQ0FBQyxRQUFRLENBQUMsQ0FBQyxDQUFDLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxDQUFDLFFBQVEsQ0FBQyxDQUFDLENBQUMsQ0FBQyxRQUFRLENBQUMsQ0FBQyxDQUFDLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxDQUFDO1FBRW5OLElBQUksQ0FBQyxHQUFHLENBQUMsT0FBTyxDQUFDLFdBQVcsQ0FBQyxHQUFFLEVBQUU7WUFDN0IsNkJBQTZCO1lBQzdCLG1EQUFtRDtZQUNuRCxJQUFJLFdBQVcsR0FBRyxJQUFJLENBQUMsTUFBTSxDQUFDO1lBQzlCLElBQUksS0FBSyxHQUFHLHdCQUFVLENBQUMsV0FBVyxDQUFDLFdBQVcsQ0FBZSxDQUFDO1lBQzlELEtBQUssQ0FBQyxTQUFTLENBQUMsU0FBUyxDQUFDLElBQUksQ0FBQyxDQUFDO1lBQ2hDLEtBQUssQ0FBQyxTQUFTLENBQUMsYUFBYSxHQUFHLElBQUkscUJBQU8sQ0FBQyxJQUFJLEVBQUMsSUFBSSxFQUFDLENBQUMsQ0FBQyxDQUFDLENBQUMsbUJBQW1CO1lBQzdFLEtBQUssQ0FBQyxTQUFTLENBQUMsYUFBYSxHQUFHLHdCQUFVLENBQUMsS0FBSyxDQUFDLElBQUkscUJBQU8sQ0FBQyxDQUFDLEVBQUUsRUFBQyxDQUFDLEVBQUUsRUFBQyxDQUFDLENBQUMsQ0FBQyxDQUFDO1lBQ3pFLDJDQUFhLENBQUMsUUFBUSxDQUFDLFdBQVcsQ0FBQyxZQUFZLENBQUMsU0FBUyxDQUFDLGNBQWMsQ0FBQyxPQUFPLENBQUMsUUFBUSxFQUFFLElBQUksQ0FBQyxDQUFDO1lBQ2pHLElBQUksQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFDLEtBQUssQ0FBQyxDQUFDO1lBQ2pDLElBQUksQ0FBQyxPQUFPLENBQUMsWUFBWSxTQUFDLG9CQUFVLEdBQUksR0FBRyxFQUFFLENBQUM7WUFDOUMsNkNBQTZDO1lBQzdDLElBQUksQ0FBQyxPQUFPLENBQUMsWUFBWSxTQUFDLG9CQUFVLEdBQUksVUFBVSxDQUFDLElBQUksQ0FBQyxLQUFLLENBQUMsQ0FBQztZQUMvRCxnQ0FBZ0M7UUFDcEMsQ0FBQyxDQUFDLENBQUM7SUFDUCxDQUFDO0NBR0o7QUFsQ0QsOEJBa0NDIn0=\",\"assetPath\":\"Assets/Script/FlowerCatch.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"canvas\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"btn\",\"type\":\"UnityEngine.UI.Button\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"flower\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"Checker\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]}],\"name\":\"FlowerCatch\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: a2ad6ee58bdae9faa5a186e7df2f544a
+  onlyWriteTrigger: 0

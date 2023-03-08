@@ -1,0 +1,71 @@
+fileFormatVersion: 2
+guid: 01bc996388fecf84c8e8781f65dc34f7
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst UnityEngine_1 = require(\\\"UnityEngine\\\");\\r\\nconst
+    UnityEngine_UI_1 = require(\\\"UnityEngine.UI\\\");\\r\\nconst ZEPETO_Character_Controller_1
+    = require(\\\"ZEPETO.Character.Controller\\\");\\r\\nconst ZEPETO_Script_1 =
+    require(\\\"ZEPETO.Script\\\");\\r\\nclass MovieSetGameManager extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\\r\\n    // private Stater : ClientStarter;\\r\\n    Start() {\\r\\n       
+    this.cam = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.ZepetoCamera.camera;
+    // \uC0DD\uC131\uB41C \uD50C\uB808\uC774\uC5B4\uC758 \uCE74\uBA54\uB77C \uAC00\uC838\uC624\uAE30\\r\\n       
+    this.GetComponent($typeof(UnityEngine_1.Canvas)).worldCamera = this.cam;\\r\\n       
+    this.GameBtnsList = new Array();\\r\\n        this.GameBtnsList = this.GameBtns.GetComponentsInChildren($typeof(UnityEngine_UI_1.Button));\\r\\n       
+    this.GameBtnsList.forEach(btn => {\\r\\n            btn.gameObject.SetActive(false);\\r\\n       
+    });\\r\\n        this.GameImgsList = new Array();\\r\\n        this.GameImgsList
+    = this.GameImgs.GetComponentsInChildren($typeof(UnityEngine_UI_1.Image));\\r\\n       
+    this.GameImgsList.forEach(img => {\\r\\n            img.gameObject.SetActive(false);\\r\\n       
+    });\\r\\n        this.GameImgsList[0].gameObject.SetActive(true);\\r\\n       
+    for (let i = 0; i < this.GameBtnsList.Length - 1; i++) {\\r\\n            this.GameBtnsList[i].onClick.AddListener(()
+    => {\\r\\n                this.GameBtnsList[i].gameObject.SetActive(false);\\r\\n               
+    this.GameBtnsList[i + 1].gameObject.SetActive(true);\\r\\n                this.GameImgsList[i
+    + 1].gameObject.SetActive(false);\\r\\n                this.GameImgsList[i +
+    2].gameObject.SetActive(true);\\r\\n            });\\r\\n        }\\r\\n       
+    this.GameBtnsList[this.GameBtnsList.Length - 1].onClick.AddListener(() => {\\r\\n           
+    this.GameBtnsList[this.GameBtnsList.Length - 1].gameObject.SetActive(false);\\r\\n           
+    this.GameImgsList[this.GameBtnsList.Length - 1].gameObject.SetActive(false);\\r\\n           
+    this.StartCoroutine(this.ResultPopup(1));\\r\\n        });\\r\\n        this.Result.transform.GetChild(0).gameObject.SetActive(false);\\r\\n       
+    this.Result.transform.GetChild(1).gameObject.SetActive(false);\\r\\n        let
+    clearImg1 = this.alert.transform.GetChild(0);\\r\\n        let clearImg2 = this.alert.transform.GetChild(1);\\r\\n       
+    let clearImg3 = this.alert.transform.GetChild(2);\\r\\n        clearImg1.GetComponentsInChildren($typeof(UnityEngine_UI_1.Button)).forEach((btn)
+    => {\\r\\n            btn.onClick.AddListener(() => {\\r\\n                clearImg1.gameObject.SetActive(false);\\r\\n               
+    clearImg2.gameObject.SetActive(true);\\r\\n            });\\r\\n        });\\r\\n       
+    clearImg2.GetComponentInChildren($typeof(UnityEngine_UI_1.Button)).onClick.AddListener(()
+    => {\\r\\n            clearImg2.gameObject.SetActive(false);\\r\\n           
+    clearImg3.gameObject.SetActive(true);\\r\\n        });\\r\\n        clearImg2.gameObject.SetActive(false);\\r\\n       
+    clearImg3.gameObject.SetActive(false);\\r\\n        this.closebtn.onClick.AddListener(()
+    => {\\r\\n            this.alert.SetActive(false);\\r\\n        });\\r\\n       
+    // this.Stater = (GameObject.Find(\\\"ClientStarter\\\")).GetComponent<ClientStarter>();\\r\\n       
+    // this.StartCoroutine(this.init());\\r\\n    }\\r\\n    *ResultPopup(rstNum)
+    {\\r\\n        this.Result.transform.GetChild(rstNum).gameObject.SetActive(true);\\r\\n       
+    yield new UnityEngine_1.WaitForSeconds(2);\\r\\n        this.Result.transform.GetChild(rstNum).gameObject.SetActive(false);\\r\\n       
+    switch (rstNum) {\\r\\n            case 0:\\r\\n                break;\\r\\n           
+    case 1:\\r\\n                this.alert.SetActive(true);\\r\\n               
+    this.gameCan.SetActive(false);\\r\\n                break;\\r\\n        }\\r\\n       
+    this.StopCoroutine(this.ResultPopup(rstNum));\\r\\n    }\\r\\n    StartGame()
+    {\\r\\n        this.GameBtnsList[0].gameObject.SetActive(true);\\r\\n       
+    this.GameImgsList[1].gameObject.SetActive(true);\\r\\n    }\\r\\n    ResetGame(isFail
+    = true) {\\r\\n        this.GameBtnsList.forEach(btn => {\\r\\n            btn.gameObject.SetActive(false);\\r\\n       
+    });\\r\\n        this.GameImgsList.forEach(img => {\\r\\n            img.gameObject.SetActive(false);\\r\\n       
+    });\\r\\n        this.GameImgsList[0].gameObject.SetActive(true);\\r\\n       
+    if (isFail) {\\r\\n            this.StartCoroutine(this.ResultPopup(0));\\r\\n       
+    }\\r\\n    }\\r\\n}\\r\\nexports.default = MovieSetGameManager;\\r\\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiTW92aWVTZXRHYW1lTWFuYWdlci5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIk1vdmllU2V0R2FtZU1hbmFnZXIudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSw2Q0FBeUU7QUFDekUsbURBQStDO0FBQy9DLDZFQUE0RDtBQUM1RCxpREFBcUQ7QUFFckQsTUFBcUIsbUJBQW9CLFNBQVEscUNBQXFCO0lBb0JsRSxrQ0FBa0M7SUFDbEMsS0FBSztRQUNELElBQUksQ0FBQyxHQUFHLEdBQUcsMkNBQWEsQ0FBQyxRQUFRLENBQUMsWUFBWSxDQUFDLE1BQU0sQ0FBQyxDQUFJLHFCQUFxQjtRQUMvRSxJQUFJLENBQUMsWUFBWSxTQUFDLG9CQUFNLEdBQUksV0FBVyxHQUFHLElBQUksQ0FBQyxHQUFHLENBQUM7UUFFbkQsSUFBSSxDQUFDLFlBQVksR0FBRyxJQUFJLEtBQUssRUFBRSxDQUFDO1FBQ2hDLElBQUksQ0FBQyxZQUFZLEdBQUcsSUFBSSxDQUFDLFFBQVEsQ0FBQyx1QkFBdUIsU0FBQyx1QkFBTSxFQUFHLENBQUM7UUFDcEUsSUFBSSxDQUFDLFlBQVksQ0FBQyxPQUFPLENBQUMsR0FBRyxDQUFDLEVBQUU7WUFDNUIsR0FBRyxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsS0FBSyxDQUFDLENBQUM7UUFDcEMsQ0FBQyxDQUFDLENBQUM7UUFDSCxJQUFJLENBQUMsWUFBWSxHQUFHLElBQUksS0FBSyxFQUFFLENBQUM7UUFDaEMsSUFBSSxDQUFDLFlBQVksR0FBRyxJQUFJLENBQUMsUUFBUSxDQUFDLHVCQUF1QixTQUFDLHNCQUFLLEVBQUcsQ0FBQztRQUNuRSxJQUFJLENBQUMsWUFBWSxDQUFDLE9BQU8sQ0FBQyxHQUFHLENBQUMsRUFBRTtZQUM1QixHQUFHLENBQUMsVUFBVSxDQUFDLFNBQVMsQ0FBQyxLQUFLLENBQUMsQ0FBQztRQUNwQyxDQUFDLENBQUMsQ0FBQztRQUNILElBQUksQ0FBQyxZQUFZLENBQUMsQ0FBQyxDQUFDLENBQUMs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\",\"assetPath\":\"Assets/Script/MovieSetGameManager.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"cam\",\"type\":\"UnityEngine.Camera\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"GameBtns\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"GameBtnsList\",\"type\":\"UnityEngine.UI.Button[]\",\"isArray\":true,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"GameImgs\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"GameImgsList\",\"type\":\"UnityEngine.UI.Image[]\",\"isArray\":true,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"Result\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"alert\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"closebtn\",\"type\":\"UnityEngine.UI.Button\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"gameCan\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]}],\"name\":\"MovieSetGameManager\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: be90545385f4bbce773e7a9facc9f84a
+  onlyWriteTrigger: 0
